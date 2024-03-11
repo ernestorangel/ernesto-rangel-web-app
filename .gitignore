@@ -64,3 +64,11 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# next.js
+/.next/
+.next/
+/out/
+
+# production
+/build
