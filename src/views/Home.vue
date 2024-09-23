@@ -3,10 +3,9 @@
         <div>
             <Carousel />
         </div>
-        <div class="flex flex-row justify-between gap-16">
-            <Card title="teste" content="teste" />
-            <Card title="teste" content="teste" />
-            <Card title="teste" content="teste" />
+        <div class="flex flex-row gap-8">
+            <Card v-for="info in homeFeaturedInfo" :title="info.title" :content="info.content"
+                :actions="info.actions" />
         </div>
     </div>
 </template>
@@ -20,6 +19,21 @@ export default {
     components: {
         Card,
         Carousel
+    },
+    data() {
+        return {
+            homeFeaturedInfo: [
+                {
+                    content: '2+ years of experience as a software developer'
+                },
+                {
+                    content: 'Masters Degree as Mechanical Engineer by UNESP'
+                },
+                {
+                    content: 'Post-graduate as Software Engineer by PUC Minas'
+                }
+            ]
+        }
     }
 }
 </script>
