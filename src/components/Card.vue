@@ -1,20 +1,33 @@
 <template>
-    <div class="w-full rounded-lg bg-[#171717]">
-        <div v-if="title" class="border-b border-[#272727] px-8 py-4">
-            {{ title }}
+    <div class="w-[320px] rounded-lg bg-[#171717] border border-[#272727]">
+        <div 
+            v-if="props.title" 
+            class="border-b border-[#272727] px-8 py-4"
+        >
+            {{ props.title }}
         </div>
-        <div v-if="content" class="px-8 py-4 text-[32px] font-bold text-center">
-            <span>{{ content }}</span>
+        <div 
+            v-if="props.content" 
+            class="px-8 py-4 text-[32px] font-bold text-center"
+        >
+            <span>
+                {{ props.content }}
+            </span>
         </div>
-        <div v-if="actions" class="border-t border-[#272727] px-8 py-4">
-            {{ actions }}
+        <div 
+            v-if="props.action" 
+            @click="router.push(props.action.path)" 
+            class="flex justify-end border-t border-[#272727] px-8 py-4"
+        >
+            {{ props.action.label }}
         </div>
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'Card',
-        props: ['title', 'content', 'actions'],
-    }
+<script setup>
+import { useRouter } from 'vue-router';
+
+const props = defineProps(['title', 'content', 'action'])
+
+const router = useRouter()
 </script>

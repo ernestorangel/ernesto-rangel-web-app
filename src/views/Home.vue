@@ -1,39 +1,55 @@
 <template>
     <div class="flex flex-col gap-16">
         <div>
-            <Carousel />
+            <DesktopWindow />
         </div>
-        <div class="flex flex-row gap-8">
-            <Card v-for="info in homeFeaturedInfo" :title="info.title" :content="info.content"
-                :actions="info.actions" />
+        <div class="flex flex-row justify-center items-center gap-16">
+            <Card 
+                v-for="info in homeFeaturedInfo" 
+                :title="info.title" 
+                :content="info.content" 
+                :action="info.action" 
+            />
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
 import Card from '../components/Card.vue';
-import Carousel from '../components/Carousel.vue';
+import DesktopWindow from '../components/DesktopWindow.vue';
 
-export default {
-    name: 'Home',
-    components: {
-        Card,
-        Carousel
+const homeFeaturedInfo = [
+    {
+        title: 'Mussum Ipsum',
+        content: 'Mussum Ipsum, cacilds vidis litro abertis.',
+        action: {
+            label: 'litro abertis',
+            path: '/about'
+        }
     },
-    data() {
-        return {
-            homeFeaturedInfo: [
-                {
-                    content: '2+ years of experience as a software developer'
-                },
-                {
-                    content: 'Masters Degree as Mechanical Engineer by UNESP'
-                },
-                {
-                    content: 'Post-graduate as Software Engineer by PUC Minas'
-                }
-            ]
+    {
+        title: 'Mussum Ipsum',
+        content: 'Mussum Ipsum, cacilds vidis litro abertis.',
+        action: {
+            label: 'litro abertis',
+            path: '/about'
+        }
+    },
+    {
+        title: 'Mussum Ipsum',
+        content: 'Mussum Ipsum, cacilds vidis litro abertis.',
+        action: {
+            label: 'litro abertis',
+            path: '/about'
+        }
+    },
+    {
+        title: 'Mussum Ipsum',
+        content: 'Mussum Ipsum, cacilds vidis litro abertis.',
+        action: {
+            label: 'litro abertis',
+            path: '/about'
         }
     }
-}
+]
 </script>

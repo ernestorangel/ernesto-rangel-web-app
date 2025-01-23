@@ -9,16 +9,12 @@ import Contact from './views/Contact.vue';
 async function setupRouter() {
   const routes = [
     { path: '/', redirect: '/home' },
-    { path: '/home', component: Home },
-    { path: '/about', component: About },
-    { path: '/curriculum', component: Curriculum },
-    { path: '/portfolio', component: Portfolio },
-    { path: '/contact', component: Contact },
-    {
-      path: '/:pathMatch(.*)*',
-      name: 'NotFound',
-      omponent: NotFound,
-    },
+    { path: '/home', name: 'home', component: Home },
+    { path: '/about', name: 'about', component: About },
+    { path: '/curriculum', name: 'curriculum', component: Curriculum },
+    { path: '/portfolio', name: 'portfolio', component: Portfolio },
+    { path: '/contact', name: 'contact', component: Contact },
+    { path: '/:pathMatch(.*)*', component: NotFound },
   ];
 
   const router = createRouter({

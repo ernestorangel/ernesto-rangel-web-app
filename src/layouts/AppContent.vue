@@ -1,11 +1,7 @@
 <template>
-    <div class="bg-black px-64 py-8 h-">
+    <div class="bg-[#171717] px-12 py-16 h-">
         <router-view />
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'AppFooter'
-    }
-</script>
+<script setup></script>

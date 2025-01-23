@@ -1,17 +1,9 @@
 <template>
-    <div class="bg-[#171717] px-64 py-8">
-        <div class="text-[16px] font-bold">
-            <span class="text-[#505050]">{{ `<` }}</span>
-                    <span class="text-[#717171]">{{ 'ernesto' }}</span>
-                    <span class="text-[#505050]">{{ 'rangel' }}</span>
-                    <span class="text-[#717171]">{{ '.dev' }}</span>
-                    <span class="text-[#505050]">{{ '/>' }}</span>
-        </div>
+    <div class="px-12 py-8 bg-[#171717] border-t border-[#272727]">
+        <Logo size="16" type="faded" />
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'AppFooter'
-    }
+<script setup>
+import Logo from '../components/Logo.vue';
 </script>
