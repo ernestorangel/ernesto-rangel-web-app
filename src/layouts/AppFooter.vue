@@ -1,6 +1,10 @@
 <template>
-    <div class="px-12 py-8 bg-[#171717] border-t border-[#272727]">
+    <div class="flex justify-between px-12 py-8 bg-[#171717] border-t border-[#272727]">
         <Logo size="16" type="faded" />
+        <div>
+            © {{ new Date().getFullYear() }}
+            Desenvolvido por Ernesto Rangel
+        </div>
     </div>
 </template>
 
