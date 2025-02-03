@@ -38,26 +38,52 @@
 <script setup>
 import { useRouter } from 'vue-router';
 
-const props = defineProps(['title', 'image', 'content', 'action', 'mode'])
+const props = defineProps([
+    'title', 
+    'image', 
+    'content', 
+    'action', 
+    'mode',
+    'heigth',
+    'width'
+])
 
 const flexProps = {
     horizontal: {
-        container: ['flex flex-row rounded-lg bg-[#171717] border border-[#272727]'],
-        imageContainer: ['w-full max-h-80 overflow-hidden'],
+        container: [
+            `w-[${props.width}px] h-[${props.heigth}px]`,
+            'flex flex-row',
+            'border rounded-lg',
+            'bg-[#171717] border-[#272727]'
+        ],
+        imageContainer: ['w-full overflow-hidden'],
         image: ['rounded-l-lg'],
         infoContainer: ['w-full'],
         title: ['px-8 py-4 font-bold text-lg'],
-        content: ['px-8 py-4'],
-        action: ['flex justify-end px-8 py-4 cursor-pointer']
+        content: ['h-full px-8 py-4'],
+        action: [
+            'flex justify-end',
+            'px-8 py-4',
+            'cursor-pointer hover:text-[#00D957]'
+        ]
     },
     vertical: {
-        container: ['flex flex-col rounded-lg bg-[#171717] border border-[#272727]'],
+        container: [
+            `w-[${props.width}px] h-[${props.heigth}px]`,
+            'flex flex-col',
+            'border rounded-lg',
+            'bg-[#171717] border-[#272727]'
+        ],
         imageContainer: ['w-full max-h-80 overflow-hidden'],
         image: ['rounded-t-lg'],
         infoContainer: ['w-full'],
-        title: ['px-8 py-4 font-bold text-lg'],
+        title: ['px-8 py-4 font-bold text-xl'],
         content: ['px-8 py-4'],
-        action: ['flex justify-end px-8 py-4 cursor-pointer']
+        action: [
+            'flex justify-end',
+            'px-8 py-4',
+            'cursor-pointer hover:text-[#00D957]'
+        ]
     }
 }
 
@@ -65,7 +91,10 @@ const flexProps = {
 const router = useRouter()
 
 function forwardTo(destination) {
-    if (`${destination}`.includes('https://')) window.open(destination);
-    else router.push(destination)
+    if (`${destination}`.includes('https://')) {
+        window.open(destination);
+    } else {
+        router.push(destination);
+    }
 }
 </script>

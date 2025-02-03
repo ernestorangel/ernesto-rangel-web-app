@@ -7,6 +7,8 @@
             :content="project.content" 
             :action="project.action"
             :mode="'horizontal'"
+            :heigth="120"
+            :width="120"
         />
     </div>
 </template>

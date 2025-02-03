@@ -1,5 +1,8 @@
 <template>
-    <div :class="`h-full flex flex-row justify-center items-center text-[${props.size}px] font-bold tracking-wide`">
+    <div :class="[
+        'h-full flex flex-row justify-center items-center',
+        `text-${props.size} font-bold tracking-wide`
+    ]">
         <span :class="`text-[${secondaryColor}]`">{{ `<` }}</span>
         <span :class="`text-[${mainColor}]`">{{ 'ernesto' }}</span>
         <span :class="`text-[${secondaryColor}]`">{{ 'rangel' }}</span>
