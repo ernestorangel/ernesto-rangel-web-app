@@ -1,5 +1,5 @@
 <template>
-    <NavList class="hidden lg:flex flex-row h-full" />
+    <NavList class="hidden lg:flex h-full" />
     <button @click="openDrawer" class="h-full lg:hidden px-8 border-b border-[#272727]">
         <Icon icon="hamburger-menu" size="sm" color="#717171" />
     </button>
@@ -10,7 +10,7 @@
         class="lg:hidden"
     >
         <template v-slot:content>
-            <NavList class="flex flex-col" />
+            <NavList class="lg:hidden flex" @closeDrawer="closeDrawer" />
         </template>
     </Drawer>
 </template>

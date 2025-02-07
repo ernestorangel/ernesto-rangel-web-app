@@ -71,18 +71,19 @@ const flexProps = {
         container: [
             `w-[${props.width}px] h-[${props.heigth}px]`,
             'flex flex-col',
-            'border rounded-lg',
-            'bg-[#171717] border-[#272727]'
+            'border rounded-md',
+            'bg-[#171717] border-[#272727]',
+            'hover:bg-[#272727] cursor-pointer'
         ],
         imageContainer: ['w-full max-h-80 overflow-hidden'],
-        image: ['rounded-t-lg'],
+        image: ['rounded-t-md'],
         infoContainer: ['w-full'],
-        title: ['px-8 py-4 font-bold text-xl'],
+        title: ['px-8 py-4 font-bold text-xl text-[#00D957]'],
         content: ['px-8 py-4'],
         action: [
             'flex justify-end',
             'px-8 py-4',
-            'cursor-pointer hover:text-[#00D957]'
+            'cursor-pointer text-[#AAC8E4] hover:text-[#00D957]'
         ]
     }
 }

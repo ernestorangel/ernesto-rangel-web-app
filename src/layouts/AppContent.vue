@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#171717] p-12">
+    <div class="pt-[55px] bg-[#171717]">
         <router-view v-slot="{ Component, route }">
             <Transition mode="out-in">
                 <component :is="Component" :key="route.path" />
@@ -10,11 +10,11 @@
 
 <style scoped>
 .v-enter-active {
-    transition: opacity 0.5s ease;
+    transition: opacity 2s ease;
 }
 
 .v-leave-from {
-    transition: opacity 0.5s ease;
+    transition: opacity 2s ease;
 }
 
 .v-enter-from {
