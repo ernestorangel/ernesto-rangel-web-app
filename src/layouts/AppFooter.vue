@@ -1,9 +1,17 @@
 <template>
-    <div class="flex justify-between px-12 py-8 bg-[#171717] border-t border-[#272727]">
-        <Logo size="16" type="faded" />
-        <div>
+    <div 
+        :class="[
+            'flex flex-col items-center justify-center', 
+            'sm:flex-row sm:justify-between',
+            'px-8 py-8',
+            'bg-[#171717]',
+            'border-t border-[#272727]'
+        ]"
+    >
+        <Logo size="16" type="faded" class="hidden sm:flex" />
+        <div class="text-[#717171]">
             © {{ new Date().getFullYear() }}
-            Desenvolvido por Ernesto Rangel
+            Ernesto Rangel
         </div>
     </div>
 </template>

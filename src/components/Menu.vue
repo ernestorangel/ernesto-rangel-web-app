@@ -1,12 +1,13 @@
 <template>
-    <NavList class="hidden lg:flex flex-row" />
-    <button @click="openDrawer" class="lg:hidden py-8">
-        <Icon icon="hamburger-menu" size="lg" color="white" />
+    <NavList class="hidden lg:flex flex-row h-full" />
+    <button @click="openDrawer" class="h-full lg:hidden px-8 border-b border-[#272727]">
+        <Icon icon="hamburger-menu" size="sm" color="#717171" />
     </button>
     <Drawer 
         :drawer="drawer"
         @open="openDrawer"
         @close="closeDrawer"
+        class="lg:hidden"
     >
         <template v-slot:content>
             <NavList class="flex flex-col" />

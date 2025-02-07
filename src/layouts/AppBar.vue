@@ -1,14 +1,14 @@
 <template>
     <div 
         :class="[
-            'sticky top-0',
-            'w-full px-12',
-            'flex flex-row items-center justify-between',
-            'border-b border-[#272727]',
+            'sticky top-0 h-[55px]',
+            'w-full',
+            'flex flex-row items-center',
             'bg-[#171717] text-[#717171]'
         ]"
     >
-        <Logo size="4xl" type="primary" />
+        <Logo size="md" type="primary" class="pl-8 border-b border-[#272727]" />
+        <div class="w-full h-full border-b border-[#272727]"></div>
         <Menu />
     </div>
 </template>
