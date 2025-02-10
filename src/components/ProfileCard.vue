@@ -8,12 +8,15 @@
                     <div class="text-md text-[#717171]">Brasil</div>
                 </div>
             </div>
-            <div class="text-sm font-light">
-                Mussum Ipsum, cacilds vidis litro abertis. 
-                Viva Forevis aptent taciti sociosqu ad litora torquent. 
-                Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. 
-                Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! 
-                Ô gente finis, pode baixar uma ampolis que hoje é sexta-feris!
+            <div class="text-sm font-light text-justify">
+                Sou um desenvolvedor Front-end  
+                com  mais de 3 anos de experiência 
+                e tenho colaborado com equipes para 
+                desenvolver aplicações web escaláveis 
+                e funcionais combinando boas práticas de 
+                desenvolvimento com criatividade 
+                para entregar experiências 
+                digitais impactantes.
             </div>
             <div class="flex flex-col gap-2">
                 <div class="font-bold">Principais Competências</div>
