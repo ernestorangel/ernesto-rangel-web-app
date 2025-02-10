@@ -1,17 +1,18 @@
 <template>
     <main class="flex flex-col">
-        <section>
-            teste
-        </section>
         <section 
-            class="flex flex-row justify-center items-center py-16 bg-[#242424]"
+            :class="[
+                'flex flex-row justify-center items-center', 
+                'py-12 px-8 bg-[#242424]'
+            ]"
         >
             <ProfileCard />
         </section>
         <section 
             :class="[
-                'flex flex-col md:flex-row justify-center items-center',
-                'gap-8 py-16 md:px-96'
+                'flex flex-col  justify-center items-center',
+                'gap-8 py-12 px-8',
+                'md:flex-row md:px-8 lg:px-40 xl:px-72'
             ]"
         >
             <Card 
@@ -34,7 +35,7 @@ const homeFeaturedInfo = [
     {
         title: 'Experiência Profissional',
         image: 'https://images.pexels.com/photos/530024/pexels-photo-530024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        content: '3+ anos de experiência no mercado de trabalho.',
+        content: '3 anos de experiência no mercado de trabalho.',
         action: {
             label: 'Veja mais',
             path: '/about'
@@ -52,7 +53,7 @@ const homeFeaturedInfo = [
     {
         title: 'Certificados & Qualificações',
         image: 'https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        content: 'Certificado como Desenvolvedor Full-stack e mais.',
+        content: 'Certificado como Desenvolvedor Full-stack pela DigitalHouse.',
         action: {
             label: 'Veja mais',
             path: '/about'

@@ -10,9 +10,9 @@ async function setupRouter() {
   const routes = [
     { path: '/', redirect: '/home' },
     { path: '/home', name: 'home', component: Home },
-    { path: '/about', name: 'about', component: About },
+    //{ path: '/about', name: 'about', component: About },
     { path: '/curriculum', name: 'curriculum', component: Curriculum },
-    { path: '/portfolio', name: 'portfolio', component: Portfolio },
+    //{ path: '/portfolio', name: 'portfolio', component: Portfolio },
     { path: '/contact', name: 'contact', component: Contact },
     { path: '/:pathMatch(.*)*', component: NotFound },
   ];

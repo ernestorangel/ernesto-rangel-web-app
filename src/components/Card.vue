@@ -72,8 +72,7 @@ const flexProps = {
             `w-[${props.width}px] h-[${props.heigth}px]`,
             'flex flex-col',
             'border rounded-md',
-            'bg-[#171717] border-[#272727]',
-            'hover:bg-[#272727] cursor-pointer'
+            'bg-[#171717] border-[#272727]'
         ],
         imageContainer: ['w-full max-h-80 overflow-hidden'],
         image: ['rounded-t-md'],
