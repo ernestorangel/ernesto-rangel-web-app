@@ -38,7 +38,7 @@ const homeFeaturedInfo = [
         content: '3 anos de experiência no mercado de trabalho.',
         action: {
             label: 'Veja mais',
-            path: '/about'
+            path: '/curriculum'
         }
     },
     {
@@ -47,7 +47,7 @@ const homeFeaturedInfo = [
         content: 'Graduado pela UNESP e pós-graduando pela PUC Minas.',
         action: {
             label: 'Veja mais',
-            path: '/about'
+            path: '/curriculum'
         }
     },
     {
@@ -56,7 +56,7 @@ const homeFeaturedInfo = [
         content: 'Certificado como Desenvolvedor Full-stack pela DigitalHouse.',
         action: {
             label: 'Veja mais',
-            path: '/about'
+            path: '/curriculum'
         }
     }
 ]
