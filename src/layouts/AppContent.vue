@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-[55px] bg-[#171717]">
+    <div class="pt-[55px] bg-gradient-to-t from-[#030a02] to-[#000000]">
         <router-view v-slot="{ Component, route }">
             <Transition mode="out-in">
                 <component :is="Component" :key="route.path" />

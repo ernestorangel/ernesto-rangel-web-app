@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col md:flex-row md:w-[790px] bg-[#1A1A1A]">
+    <div class="flex flex-col md:flex-row md:w-[790px] rounded-lg bg-[#242424] border border-[#454545]">
         <div class="w-full flex flex-col gap-2 p-4">
             <div class="flex flex-col gap-1">
                 <div class="text-2xl font-bold">Ernesto Rangel</div>
@@ -8,7 +8,7 @@
                     <div class="text-md text-[#717171]">Brasil</div>
                 </div>
             </div>
-            <div class="text-sm font-light text-justify">
+            <div class="text-sm font-light">
                 Sou um desenvolvedor Front-end  
                 com  mais de 3 anos de experiência 
                 e tenho colaborado com equipes para 
