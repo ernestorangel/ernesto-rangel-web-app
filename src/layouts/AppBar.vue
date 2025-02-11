@@ -1,7 +1,7 @@
 <template>
     <div 
         :class="[
-            'fixed top-0 h-[55px]',
+            'fixed top-0 h-[55px] z-50',
             'w-full',
             'flex flex-row items-center',
             'bg-[#171717] text-[#717171]'

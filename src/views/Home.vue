@@ -1,30 +1,32 @@
 <template>
-    <main class="flex flex-col">
-        <section 
-            :class="[
-                'flex flex-row justify-center items-center', 
-                'py-12 px-8 bg-[#242424]'
-            ]"
-        >
-            <ProfileCard />
-        </section>
-        <section 
-            :class="[
-                'flex flex-col  justify-center items-center',
-                'gap-8 py-12 px-8',
-                'md:flex-row md:px-8 lg:px-40 xl:px-72'
-            ]"
-        >
-            <Card 
-                v-for="info in homeFeaturedInfo" 
-                :title="info.title" 
-                :image="info.image"
-                :content="info.content" 
-                :action="info.action"
-                :mode="'vertical'"
-            />
-        </section>
-    </main>
+    <Transition>
+        <main class="flex flex-col">
+            <section 
+                :class="[
+                    'flex flex-row justify-center items-center', 
+                    'py-12 px-8'
+                ]"
+            >
+                <ProfileCard />
+            </section>
+            <section 
+                :class="[
+                    'flex flex-col justify-center items-center',
+                    'gap-8 py-12 px-8',
+                    'md:flex-row md:px-8 lg:px-40 xl:px-72'
+                ]"
+            >
+                <Card 
+                    v-for="info in homeFeaturedInfo" 
+                    :title="info.title" 
+                    :image="info.image"
+                    :content="info.content" 
+                    :action="info.action"
+                    :mode="'vertical'"
+                />
+            </section>
+        </main>
+    </Transition>
 </template>
 
 <script setup>
@@ -61,3 +63,14 @@ const homeFeaturedInfo = [
     }
 ]
 </script>
+
+<style scoped>
+.v-enter-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>

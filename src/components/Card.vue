@@ -71,11 +71,11 @@ const flexProps = {
         container: [
             `w-[${props.width}px] h-[${props.heigth}px]`,
             'flex flex-col',
-            'border rounded-md',
-            'bg-[#171717] border-[#272727]'
+            'border rounded-lg',
+            'bg-[#242424] border-[#454545]'
         ],
         imageContainer: ['w-full max-h-80 overflow-hidden'],
-        image: ['rounded-t-md'],
+        image: ['rounded-t-lg'],
         infoContainer: ['w-full'],
         title: ['px-8 py-4 font-bold text-xl text-[#00D957]'],
         content: ['px-8 py-4'],
