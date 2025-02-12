@@ -1,7 +1,7 @@
 <template>
     <div 
         :class="[
-            'z-50',
+            'z-50 lg:hidden',
             `${props.drawer ? 'translate-x-0' : 'translate-x-80'}`,
             'fixed w-80 right-0 top-0 bottom-0',
             ' border',
@@ -20,7 +20,7 @@
         :class="[
             `${props.drawer ? 'fixed' : 'hidden'}`,
             'top-0 bottom-0 right-0 left-0',
-            'z-40  bg-white opacity-30',
+            'z-40 bg-white opacity-30',
             'transition-all duration-300'
         ]"
     ></div>

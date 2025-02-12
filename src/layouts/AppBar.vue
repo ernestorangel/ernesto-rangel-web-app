@@ -4,18 +4,19 @@
             'fixed top-0 h-[55px] z-50',
             'w-full',
             'flex flex-row items-center',
-            'bg-[#171717] text-[#717171]'
+            'bg-[#242424] text-[#fafafa]'
         ]"
     >
-        <div class="xl:min-w-[100px] h-full border-b border-[#272727]"></div>
-        <Logo size="md" type="primary" class="pl-8 border-b border-[#272727]" />
-        <div class="w-full h-full border-b border-[#272727]"></div>
+        <Spacer w="hidden xl:flex xl:min-w-[100px]" ></Spacer>
+        <Logo size="md" type="primary"></Logo>
+        <Spacer w="w-full"></Spacer>
         <Menu></Menu>
-        <div class="xl:min-w-[100px] h-full border-b border-[#272727]"></div>
+        <Spacer w="hidden xl:flex xl:min-w-[100px]"></Spacer>
     </div>
 </template>
 
 <script setup>
 import Logo from '../components/Logo.vue';
 import Menu from '../components/Menu.vue';
+import Spacer from '../components/Spacer.vue';
 </script>

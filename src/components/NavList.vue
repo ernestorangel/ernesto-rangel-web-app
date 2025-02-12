@@ -8,7 +8,7 @@
                 :class="[
                     'flex items-center justify-center',
                     'py-4 lg:px-4 lg:py-0',
-                    'w-full h-full text-sm lg:border-b border-[#272727]',
+                    'w-full h-full text-sm lg:border-b border-[#454545]',
                     'hover:bg-[#1f1f1f] cursor-pointer',
                     'transition duration-300 ease-in-out',
                     `${isCurrentRouteCSS(route.path)}`
@@ -39,7 +39,7 @@
             >
                 <Icon icon="world" size="sm" color="#717171" />
             </button> -->
-            <ul class="w-full flex flex-row items-center justify-center lg:border-l border-[#272727]">
+            <ul class="w-full flex flex-row items-center justify-center lg:border-l border-[#454545]">
                 <li 
                     v-for="(link, index) in socialLinks" 
                     :key="index"
@@ -47,11 +47,11 @@
                     :class="[
                         'flex items-center justify-center',
                         'py-4 lg:px-4 lg:py-0',
-                        'w-full h-full text-sm lg:border-b border-[#272727]',
+                        'w-full h-full text-sm lg:border-b border-[#454545]',
                         'hover:bg-[#1f1f1f] cursor-pointer'
                     ]"
                 >
-                    <Icon :icon="link.icon" size="sm" color="#717171" />
+                    <Icon :icon="link.icon" size="sm" color="#fafafa" />
                 </li>
             </ul>
         </div>

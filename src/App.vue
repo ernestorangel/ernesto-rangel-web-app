@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#171717] text-white h-screen">
+    <div class="bg-gradient-to-t from-[#030a02] to-[#000000] text-[#FAFAFA]">
         <AppBar />
         <Transition>
             <AppContent />

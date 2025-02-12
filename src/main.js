@@ -4,8 +4,6 @@ import App from './App.vue';
 import setupRouter from './router';
 
 document.addEventListener('DOMContentLoaded', async function () {
-  console.log('script loaded');
-
   try {
     let app = firebase.app();
   } catch (e) {

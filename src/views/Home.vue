@@ -4,7 +4,7 @@
             <section 
                 :class="[
                     'flex flex-row justify-center items-center', 
-                    'py-12 px-8'
+                    'pt-8 lg:pt-12 px-8'
                 ]"
             >
                 <ProfileCard />
@@ -13,7 +13,7 @@
                 :class="[
                     'flex flex-col justify-center items-center',
                     'gap-8 py-12 px-8',
-                    'md:flex-row md:px-8 lg:px-40 xl:px-72'
+                    'md:flex-row md:px-8 lg:px-24 xl:px-54 2xl:px-72'
                 ]"
             >
                 <Card 

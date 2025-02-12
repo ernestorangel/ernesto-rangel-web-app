@@ -3,13 +3,13 @@
         :class="[
             'flex flex-col items-center justify-center', 
             'sm:flex-row sm:justify-between',
-            'px-8 py-8',
-            'bg-[#171717]',
+            'px-8 lg:px-24 py-8',
+            'bg-transparent text-[#fafafa]',
             'border-t border-[#272727]'
         ]"
     >
         <Logo size="16" type="faded" class="hidden sm:flex" />
-        <div class="text-[#717171]">
+        <div>
             © {{ new Date().getFullYear() }}
             Ernesto Rangel
         </div>

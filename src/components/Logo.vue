@@ -1,9 +1,13 @@
 <template>
-    <div :class="[
-        'h-full flex flex-row justify-center items-center',
-        `text-${props.size} font-bold tracking-wide`
-    ]">
-        <span :class="`text-[${secondaryColor}]`">{{ `<` }}</span>
+    <div 
+        :class="[
+            'h-full flex flex-row justify-center items-center',
+            `text-${props.size} font-normal tracking-widest`,
+            'pl-8 border-[#454545]',
+            `${props.type == 'primary' ? 'border-b' : ''}`
+        ]"
+    >
+        <span :class="`text-[${secondaryColor}]`">{{ `<`  }}</span>
         <span :class="`text-[${mainColor}]`">{{ 'ernesto' }}</span>
         <span :class="`text-[${secondaryColor}]`">{{ 'rangel' }}</span>
         <span :class="`text-[${mainColor}]`">{{ '.dev' }}</span>
