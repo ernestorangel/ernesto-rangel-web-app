@@ -1,13 +1,12 @@
 <template>
     <NavList class="hidden lg:flex h-full" />
-    <button @click="openDrawer" class="h-full lg:hidden px-8 border-b border-[#272727]">
-        <Icon icon="hamburger-menu" size="sm" color="#717171" />
+    <button @click="openDrawer" class="h-full lg:hidden px-8 border-b border-[#454545]">
+        <Icon icon="hamburger-menu" size="sm" color="#fafafa" />
     </button>
     <Drawer 
         :drawer="drawer"
         @open="openDrawer"
         @close="closeDrawer"
-        class="lg:hidden"
     >
         <template v-slot:content>
             <NavList class="lg:hidden flex" @closeDrawer="closeDrawer" />
@@ -24,12 +23,10 @@ import { ref } from 'vue';
 const drawer = ref(false);
 
 function openDrawer() {
-    console.log('open')
     drawer.value = true;
 }
 
 function closeDrawer() {
-    console.log('close')
     drawer.value = false;
 }
 </script>
