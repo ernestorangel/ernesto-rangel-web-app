@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-[55px] z-10">
+    <div class="pt-[55px] z-10 min-h-screen">
         <router-view v-slot="{ Component, route }">
             <Transition mode="out-in">
                 <component :is="Component" :key="route.path" />
