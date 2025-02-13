@@ -160,6 +160,31 @@
             <path d="M163.865,436.934c-14.406,0.006-28.222-5.72-38.4-15.915L9.369,304.966c-12.492-12.496-12.492-32.752,0-45.248l0,0   c12.496-12.492,32.752-12.492,45.248,0l109.248,109.248L452.889,79.942c12.496-12.492,32.752-12.492,45.248,0l0,0   c12.492,12.496,12.492,32.752,0,45.248L202.265,421.019C192.087,431.214,178.271,436.94,163.865,436.934z"/>
         </g>
     </svg>
+    <svg
+        v-else-if="props.icon == 'calendar'"
+        xmlns="http://www.w3.org/2000/svg" 
+        id="Filled" 
+        viewBox="0 0 24 24" 
+        :width="dimension.width" 
+        :height="dimension.height"
+    >
+        <g :fill="color">
+            <path d="M0,19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V10H0Zm17-4.5A1.5,1.5,0,1,1,15.5,16,1.5,1.5,0,0,1,17,14.5Zm-5,0A1.5,1.5,0,1,1,10.5,16,1.5,1.5,0,0,1,12,14.5Zm-5,0A1.5,1.5,0,1,1,5.5,16,1.5,1.5,0,0,1,7,14.5Z"/><path d="M19,2H18V1a1,1,0,0,0-2,0V2H8V1A1,1,0,0,0,6,1V2H5A5.006,5.006,0,0,0,0,7V8H24V7A5.006,5.006,0,0,0,19,2Z"/>
+        </g>
+    </svg>
+    <svg
+        v-else-if="props.icon == 'company'"
+        xmlns="http://www.w3.org/2000/svg" 
+        id="Layer_1" 
+        viewBox="0 0 24 24" 
+        data-name="Layer 1"
+        :width="dimension.width" 
+        :height="dimension.height"
+    >
+        <g :fill="color">
+            <path d="m11 0h-8a3 3 0 0 0 -3 3v21h14v-21a3 3 0 0 0 -3-3zm-5 19h-3v-2h3zm0-4h-3v-2h3zm0-4h-3v-2h3zm0-4h-3v-2h3zm5 12h-3v-2h3zm0-4h-3v-2h3zm0-4h-3v-2h3zm0-4h-3v-2h3zm10-2h-5v19h8v-16a3 3 0 0 0 -3-3zm0 14h-2v-2h2zm0-4h-2v-2h2zm0-4h-2v-2h2z"/>
+        </g>
+    </svg>
 </template>
 
 <script setup>

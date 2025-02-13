@@ -24,13 +24,13 @@
                     {{ props.content }}
                 </span>
             </div>
-            <div 
+            <a 
                 v-if="props.action" 
-                @click="forwardTo(props.action.path)" 
+                :href="props.action.path"
                 :class="flexProps[props.mode].action"
             >
                 {{ props.action.label }}
-            </div>
+        </a>
         </div>
     </div>
 </template>
