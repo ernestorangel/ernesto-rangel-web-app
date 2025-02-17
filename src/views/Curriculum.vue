@@ -212,7 +212,7 @@ const professionalHistory = [
         from: 'Ago 2024',
         to: 'Atualmente',
         company: 'Comerc Energia (Liax)',
-        location: 'Brasil',
+        location: 'São Paulo, BR',
         mode: 'Remoto',
         title: 'Desenvolvedor Front-end',
         description: [
@@ -243,7 +243,7 @@ const professionalHistory = [
         from: 'Mar 2021',
         to: 'Jul 2022',
         company: 'LL Loyalty',
-        location: 'Brasil',
+        location: 'São Paulo, BR',
         mode: 'Remoto',
         title: 'Analista de Dados (Financeiro & Comercial)',
         description: [
@@ -260,8 +260,24 @@ const academicHistory = [
         title: 'Engenharia de Software',
         type: 'Pós-graduação',
         institution: 'PUC Minas',
-        description: ['Desenvolvimento de uma aplicação completa usando Node.js, Express, Sequelize e SQL'],
-        tags: ['Agile', 'Scrum', 'Engenharia de Requisitos']
+        tags: [
+            'Gerenciamento Ágil de Projetos', 
+            'Engenharia de Requisitos',
+            'Design de Experiência de Usuário',
+            'Arquitetura de Soluções em Nuvem',
+            'Arquitetura de Front-end',
+            'Arquitetura de Back-end',
+            'Estratégias para Desenvolvimento de Software',
+            'APIs & Web Services',
+            'Banco de Dados Relacionais',
+            'Banco de Dados Não-relacionais',
+            'Cultura e Práticas DevOps',
+            'Cultura e Práticas DevSecOps',
+            'Testes de Software',
+            'Práticas de Implementação e Evolução de Software',
+            'Qualidade de Software',
+            'IA Generativa para Engenharia de Software'
+        ]
     },
     {
         from: '2016',
@@ -269,7 +285,6 @@ const academicHistory = [
         title: 'Engenharia Mecânica',
         type: 'Graduação',
         institution: 'UNESP',
-        description: ['Desenvolvimento de uma aplicação completa usando Node.js, Express, Sequelize e SQL'],
         tags: ['Cálculo', 'Estrutura de Dados', 'Programação Orientada a Objeto', 'Java']
     }
 ]
