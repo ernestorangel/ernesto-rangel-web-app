@@ -1,14 +1,14 @@
 <template>
     <div 
         :class="[
-            'fixed top-0 h-[55px] z-50',
+            'sticky top-0 h-[85px] z-50',
             'w-full',
             'flex flex-row items-center',
-            'bg-[#242424] text-[#fafafa]'
+            'bg-white/10 text-[#fafafa]'
         ]"
     >
         <Spacer w="hidden xl:flex xl:min-w-[100px]" ></Spacer>
-        <Logo size="md" type="primary"></Logo>
+        <Logo size="xl" type="primary"></Logo>
         <Spacer w="w-full"></Spacer>
         <Menu></Menu>
         <Spacer w="hidden xl:flex xl:min-w-[100px]"></Spacer>

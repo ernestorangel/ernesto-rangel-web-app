@@ -1,30 +1,29 @@
 <template>
-    <div class="flex flex-col md:flex-row md:w-[790px] rounded-lg bg-[#242424] border border-[#454545]">
-        <div class="w-full flex flex-col gap-2 p-4">
+    <div 
+        :class="[
+            'flex flex-col',
+            'md:flex-row md:w-[790px]',
+        ]"
+    >
+        <div class="w-full flex flex-col gap-8 p-16">
             <div class="flex flex-col gap-1">
-                <div class="text-2xl font-bold">Ernesto Rangel</div>
+                <div class="text-6xl font-bold">{{ textContent.name }}</div>
                 <div class="flex items-center gap-1">
-                    <Icon icon="location" size="sm" color="#717171" />
-                    <div class="text-md text-[#717171]">Brasil</div>
+                    <Icon icon="location" size="sm" color="#ffffff" />
+                    <div class="text-lg text-[#ffffff]">{{ textContent.location }}</div>
                 </div>
             </div>
-            <div class="text-sm font-light">
-                Sou um desenvolvedor Front-end  
-                com  mais de 3 anos de experiência 
-                e tenho colaborado com equipes para 
-                desenvolver aplicações web escaláveis 
-                e funcionais combinando boas práticas de 
-                desenvolvimento com criatividade 
-                para entregar experiências 
-                digitais impactantes.
+            <div class="text-lg font-light text-[#ffffff] subpixel-antialiased legibility">
+                <strong class="text-[#1ad367]">{{ textContent.ocupation }}</strong>  
+                {{ textContent.description }}
             </div>
             <div class="flex flex-col gap-2">
-                <div class="font-bold">Principais Competências</div>
+                <div class="font-bold text-lg">{{ textContent.highlightTitle }}</div>
                 <span>
                     <ul class="flex gap-3 flex-wrap">
                         <li
                             v-for="item in proficiencies"
-                            class="whitespace-nowrap py-1 px-4 rounded-lg text-sm text-[#AAC8E4] bg-gray-700"
+                            class="whitespace-nowrap py-1 px-4 rounded-lg text-lg text-[#AAC8E4] bg-gray-700/60"
                         >
                             {{ item.label }}
                         </li>
@@ -32,14 +31,22 @@
                 </span>
             </div>
         </div>
-        <div class="md:w-[420px] flex items-center  justify-center p-4">
-            <img width="100%" src="../assets/images/pp-small.jpg" />
-        </div>
     </div>
 </template>
 
 <script setup>
 import Icon from './Icon.vue';
+import { computed } from 'vue';
+import { useLanguageStore } from '../stores/language';
+import useLanguageContent from '../utils/useLanguageContent';
+
+const { getContent } = useLanguageContent()
+
+const textContent = computed(() => (
+    getContent(useLanguageStore().currentLanguage, 'profileCard')
+))
+
+console.log(textContent.value)
 
 const proficiencies = [
     {

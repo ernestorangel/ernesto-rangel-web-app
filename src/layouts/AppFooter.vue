@@ -3,9 +3,9 @@
         :class="[
             'flex flex-col items-center justify-center', 
             'sm:flex-row sm:justify-between',
-            'px-8 lg:px-24 py-8',
-            'bg-transparent text-[#fafafa]',
-            'border-t border-[#272727]'
+            'h-[110px] px-8 lg:px-24',
+            'bg-white/10 backdrop-blur-sm text-[#fafafa]',
+            'border-t border-white/30 shadow xl'
         ]"
     >
         <Logo size="16" type="faded" class="hidden sm:flex" />

@@ -2,8 +2,8 @@
     <div 
         :class="[
             `${props.w} h-full`,
-            'bg-[#242424]',
-            'border-b border-[#454545]'
+            'backdrop-blur-sm',
+            'border-b border-white/30'
         ]"
     ></div>
 </template>

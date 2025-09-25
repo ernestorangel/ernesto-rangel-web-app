@@ -1,6 +1,6 @@
 <template>
     <NavList class="hidden lg:flex h-full" />
-    <button @click="openDrawer" class="h-full lg:hidden px-8 border-b border-[#454545]">
+    <button @click="openDrawer" class="h-full lg:hidden">
         <Icon icon="hamburger-menu" size="sm" color="#fafafa" />
     </button>
     <Drawer 

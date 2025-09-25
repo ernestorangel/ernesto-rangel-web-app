@@ -3,15 +3,15 @@
         :class="[
             'h-full flex flex-row justify-center items-center',
             `text-${props.size} font-normal tracking-widest`,
-            'pl-8 border-[#454545]',
+            'pl-8 border-white/30',
             `${props.type == 'primary' ? 'border-b' : ''}`
         ]"
     >
-        <span :class="`text-[${secondaryColor}]`">{{ `<`  }}</span>
-        <span :class="`text-[${mainColor}]`">{{ 'ernesto' }}</span>
-        <span :class="`text-[${secondaryColor}]`">{{ 'rangel' }}</span>
-        <span :class="`text-[${mainColor}]`">{{ '.dev' }}</span>
-        <span :class="`text-[${secondaryColor}]`">{{ '/>' }}</span>
+        <span :class="`text-[${secondaryColor}] subpixel-antialiased legibility`">{{ `<`  }}</span>
+        <span :class="`text-[${mainColor}] subpixel-antialiased legibility`">{{ 'ernesto' }}</span>
+        <span :class="`text-[${secondaryColor}] subpixel-antialiased legibility`">{{ 'rangel' }}</span>
+        <span :class="`text-[${mainColor}] subpixel-antialiased legibility`">{{ '.dev' }}</span>
+        <span :class="`text-[${secondaryColor}] subpixel-antialiased legibility`">{{ '/>' }}</span>
     </div>
 </template>
 

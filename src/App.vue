@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-gradient-to-t from-[#030a02] to-[#000000] text-[#FAFAFA]">
-        <AppBar />
+    <div class="h-full bg-[#00141d] text-[#FAFAFA]">
+        <!-- <AppBar /> -->
         <Transition>
             <AppContent />
         </Transition>
-        <AppFooter />
+        <!-- <AppFooter /> -->
     </div>
 </template>
 
@@ -14,14 +14,14 @@ import AppContent from './layouts/AppContent.vue';
 import AppFooter from './layouts/AppFooter.vue';
 </script>
 
-<style scoped>
+<style>
 .v-enter-active {
     transition: opacity 1s ease;
 }
 
-/* .v-leave-from {
-
-} */
+.v-leave-from {
+    transition: opacity 1s ease;
+}
 
 .v-enter-from {
     opacity: 1;
@@ -29,5 +29,14 @@ import AppFooter from './layouts/AppFooter.vue';
 
 .v-leave-to {
     opacity: 0;
+}
+
+.legibility {
+    text-rendering: optimizeLegibility;
+}
+
+.bg-img {
+    /* background-image: url('./assets/images/bg-img.svg'); */
+    background-color: #00141d;
 }
 </style>

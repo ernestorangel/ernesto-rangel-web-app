@@ -1,5 +1,6 @@
 //import firebase from 'firebase/app';
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import App from './App.vue';
 import setupRouter from './router';
 
@@ -13,6 +14,10 @@ document.addEventListener('DOMContentLoaded', async function () {
   const vueApp = createApp(App);
   const router = await setupRouter();
   vueApp.use(router);
+
+  const pinia = createPinia();
+  vueApp.use(pinia);
+
   vueApp.mount('#app');
 
   //setAnchorOffset()

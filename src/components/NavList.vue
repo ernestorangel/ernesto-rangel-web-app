@@ -8,8 +8,8 @@
                 :class="[
                     'flex items-center justify-center',
                     'py-4 lg:px-4 lg:py-0',
-                    'w-full h-full text-sm lg:border-b border-[#454545]',
-                    'hover:bg-[#1f1f1f] cursor-pointer',
+                    'w-full h-full text-sm',
+                    'cursor-pointer',
                     'transition duration-300 ease-in-out',
                     `${isCurrentRouteCSS(route.path)}`
                 ]"
@@ -28,8 +28,9 @@
                 ]"
             >
                 <Icon icon="moon" size="sm" color="#717171" />
-            </button>
+            </button> -->
             <button 
+                @click="toggleLang"
                 :class="[
                     'flex items-center justify-center',
                     'w-full py-4 lg:px-4 lg:py-0',
@@ -38,8 +39,8 @@
                 ]"
             >
                 <Icon icon="world" size="sm" color="#717171" />
-            </button> -->
-            <ul class="w-full flex flex-row items-center justify-center lg:border-l border-[#454545]">
+            </button>
+            <ul class="w-full flex flex-row items-center justify-center">
                 <li 
                     v-for="(link, index) in socialLinks" 
                     :key="index"
@@ -47,8 +48,8 @@
                     :class="[
                         'flex items-center justify-center',
                         'py-4 lg:px-4 lg:py-0',
-                        'w-full h-full text-sm lg:border-b border-[#454545]',
-                        'hover:bg-[#1f1f1f] cursor-pointer'
+                        'w-full h-full text-sm ',
+                        'cursor-pointer'
                     ]"
                 >
                     <Icon :icon="link.icon" size="sm" color="#fafafa" />
@@ -64,6 +65,11 @@
 import Icon from './Icon.vue';
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
+import { useLanguageStore } from '../stores/language';
+
+function toggleLang() {
+    useLanguageStore().setLanguage('PT-BR')
+}
 
 const socialLinks = [
     {
