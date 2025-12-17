@@ -11,10 +11,10 @@
             'w-full md:w-[260px]',
             'flex items-center justify-center',
             'p-4 rounded-lg',
-            'bg-gradient-to-t from-[#082404] to-[#000000]',
+            'bg-white/10 backdrop-blur-sm',
             'text-[#FAFAFA]',
             'hover:border-[#00D957] hover:text-[#00D957]',
-            'border border-[#454545]',
+            'border border-white/30',
           ]"
         >
           Acessar CV em PDF
@@ -31,7 +31,7 @@
             v-for="experience in professionalHistory"
             :class="[
               'flex flex-col md:flex-row gap-4',
-              'rounded-lg bg-[#242424] border border-[#454545]',
+              'rounded-lg bg-white/10 border border-white/30',
             ]"
           >
             <div
@@ -102,7 +102,7 @@
             v-for="experience in academicHistory"
             :class="[
               'flex flex-col gap-2',
-              'p-8 rounded-lg bg-[#242424] border border-[#454545]',
+              'p-8 rounded-lg bg-white/10 border border-white/30',
             ]"
           >
             <div class="flex flex-col font-bold text-lg">
@@ -144,7 +144,7 @@
             v-for="experience in coursesHistory"
             :class="[
               'flex flex-col gap-2',
-              'p-8 rounded-lg bg-[#242424] border border-[#454545]',
+              'p-8 rounded-lg bg-white/10 border border-white/30',
             ]"
           >
             <div class="flex flex-col font-bold text-lg">
@@ -183,7 +183,7 @@
             v-for="experience in languages"
             :class="[
               'flex flex-col gap-2',
-              'p-8 rounded-lg bg-[#242424] border border-[#454545]',
+              'p-8 rounded-lg bg-white/10 border border-white/30',
             ]"
           >
             <div class="flex flex-col font-bold text-lg">
@@ -266,7 +266,7 @@ const professionalHistory = [
 const academicHistory = [
   {
     from: "2024",
-    to: "Presente",
+    to: "2025",
     title: "Engenharia de Software",
     type: "Pós-graduação",
     institution: "PUC Minas",
