@@ -11,7 +11,7 @@
           'w-full h-full text-sm',
           'cursor-pointer',
           'transition duration-300 ease-in-out',
-          'hover:bg-white/20',
+          'hover:bg-white/20 backdrop-blur-sm',
           `border-b ${isCurrentRouteCSS(route.path)}`,
         ]"
       >
@@ -30,7 +30,7 @@
             'py-4 lg:px-4 lg:py-0',
             'w-full h-full text-sm ',
             'cursor-pointer',
-            'border-b border-white/30',
+            'border-b border-white/30 backdrop-blur-sm',
             'transition duration-300 ease-in-out',
             'hover:bg-white/20',
           ]"
