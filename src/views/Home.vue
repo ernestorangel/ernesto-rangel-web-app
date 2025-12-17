@@ -1,6 +1,8 @@
 <template>
   <Transition>
-    <main class="h-screen flex flex-col gap-8 justify-center items-center">
+    <main
+      class="min-h-[calc(100vh-195px)] flex flex-col gap-8 justify-center items-center"
+    >
       <ProfileCard />
     </main>
   </Transition>
