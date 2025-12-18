@@ -59,18 +59,26 @@ const proficiencies = [
   },
   {
     index: 1,
-    label: "Tailwind CSS",
+    label: "Vuetify",
   },
   {
     index: 2,
-    label: "Javascript",
+    label: "JavaScript",
   },
   {
     index: 3,
-    label: "HTML",
+    label: "TypeScript",
   },
   {
     index: 4,
+    label: "Tailwind CSS",
+  },
+  {
+    index: 5,
+    label: "HTML",
+  },
+  {
+    index: 6,
     label: "CSS",
   },
 ];
