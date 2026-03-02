@@ -46,11 +46,6 @@
 import Icon from "./Icon.vue";
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { useLanguageStore } from "../stores/language";
-
-function toggleLang() {
-  useLanguageStore().setLanguage("PT-BR");
-}
 
 const socialLinks = [
   {
@@ -74,7 +69,7 @@ const routes = computed(() =>
     .map((route) => ({
       name: route.name,
       path: `/${route.name}`,
-      label: route.name,
+      label: route.meta?.title || route.name,
     })),
 );
 

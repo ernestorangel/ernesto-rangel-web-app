@@ -40,17 +40,21 @@
 
 <script setup>
 import Icon from "./Icon.vue";
-import { computed } from "vue";
-import { useLanguageStore } from "../stores/language";
-import useLanguageContent from "../utils/useLanguageContent";
 
-const { getContent } = useLanguageContent();
-
-const textContent = computed(() =>
-  getContent(useLanguageStore().currentLanguage, "profileCard"),
-);
-
-console.log(textContent.value);
+const textContent = {
+  name: "Ernesto Rangel",
+  location: "Brasil",
+  ocupation: "Desenvolvedor Front-end",
+  description:
+    "com uma sólida experiência no mercado \
+    e colaborando com equipes ágeis para \
+    desenvolver aplicações web escaláveis \
+    e funcionais combinando boas práticas de \
+    desenvolvimento com criatividade \
+    para entregar experiências \
+    digitais impactantes.",
+  highlightTitle: "Principais Competências",
+};
 
 const proficiencies = [
   {
