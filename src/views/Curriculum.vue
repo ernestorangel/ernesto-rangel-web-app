@@ -1,7 +1,7 @@
 <template>
   <Transition>
     <div class="w-full xl:px-52 2xl:px-96 flex flex-col items-center">
-      <section
+      <!-- <section
         class="fixed bottom-0 right-0 items-center justify-center w-full md:w-auto md:justify-end p-4"
       >
         <a
@@ -19,7 +19,7 @@
         >
           Acessar CV em PDF
         </a>
-      </section>
+      </section> -->
 
       <section
         id="professional-experience"

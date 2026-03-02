@@ -68,7 +68,7 @@ const routes = computed(() =>
     .filter((route) => route.name)
     .map((route) => ({
       name: route.name,
-      path: `/${route.name}`,
+      path: route.path,
       label: route.meta?.title || route.name,
     })),
 );

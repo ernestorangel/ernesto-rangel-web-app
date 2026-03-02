@@ -6,13 +6,7 @@ import Contact from "./views/Contact.vue";
 
 async function setupRouter() {
   const routes = [
-    { path: "/", redirect: "/home" },
-    {
-      path: "/home",
-      name: "home",
-      component: Home,
-      meta: { title: "Início" },
-    },
+    { path: "/", name: "home", component: Home, meta: { title: "Início" } },
     {
       path: "/curriculum",
       name: "curriculum",
