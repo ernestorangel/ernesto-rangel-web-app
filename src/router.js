@@ -7,18 +7,18 @@ import Contact from "./views/Contact.vue";
 async function setupRouter() {
   const routes = [
     { path: "/", name: "home", component: Home, meta: { title: "Início" } },
-    {
-      path: "/curriculum",
-      name: "curriculum",
-      component: Curriculum,
-      meta: { title: "Currículo" },
-    },
-    {
-      path: "/contact",
-      name: "contact",
-      component: Contact,
-      meta: { title: "Contato" },
-    },
+    // {
+    //   path: "/curriculum",
+    //   name: "curriculum",
+    //   component: Curriculum,
+    //   meta: { title: "Currículo" },
+    // },
+    // {
+    //   path: "/contact",
+    //   name: "contact",
+    //   component: Contact,
+    //   meta: { title: "Contato" },
+    // },
     { path: "/:pathMatch(.*)*", component: NotFound },
   ];
 

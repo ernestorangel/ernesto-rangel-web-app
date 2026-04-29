@@ -1,10 +1,10 @@
 <template>
   <div class="h-full bg-[#00141d] text-[#FAFAFA]">
-    <AppBar />
+    <!-- <AppBar /> -->
     <Transition>
       <AppContent />
     </Transition>
-    <AppFooter />
+    <!-- <AppFooter /> -->
   </div>
 </template>
 
