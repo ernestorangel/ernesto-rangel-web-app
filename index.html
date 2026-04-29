@@ -8,7 +8,8 @@
   <script>
     (function () {
       var saved = localStorage.getItem('ernesto-rangel-theme');
-      if (!saved || saved === 'dark') document.documentElement.classList.add('dark');
+      var preferred = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (preferred === 'dark') document.documentElement.classList.add('dark');
       document.documentElement.classList.add('no-transition');
       window.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(function () {

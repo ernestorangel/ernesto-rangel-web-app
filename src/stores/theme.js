@@ -4,7 +4,8 @@ import { ref, computed, watch } from 'vue'
 export const useThemeStore = defineStore('theme', () => {
   const STORAGE_KEY = 'ernesto-rangel-theme'
 
-  const theme = ref(localStorage.getItem(STORAGE_KEY) ?? 'dark')
+  const systemDefault = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  const theme = ref(localStorage.getItem(STORAGE_KEY) ?? systemDefault)
 
   const isDark = computed(() => theme.value === 'dark')
 
