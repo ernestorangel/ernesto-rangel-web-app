@@ -38,7 +38,7 @@
             <a
               :href="link.href"
               target="_blank"
-              class="flex items-center gap-2 text-xl text-gray-400 cursor-pointer hover:text-gray-200 transition duration-300 ease-in-out"
+              class="flex items-center gap-2 text-xl text-gray-400 cursor-pointer hover:text-gray-200 hover:px-4 hover:py-2 hover:bg-white/10 hover:rounded-full transition-all duration-300 ease-in-out"
             >
               <Icon :icon="link.icon" size="lg" color="#fafafa" />
               {{ link.displayName }}
