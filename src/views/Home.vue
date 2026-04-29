@@ -19,32 +19,35 @@
       ></div>
 
       <main
-        class="min-h-screen flex flex-col sm:items-center justify-center gap-2 px-12 z-10"
+        class="min-h-screen flex flex-col sm:flex-row items-center justify-center gap-8 px-4 z-10"
       >
-        <h1
-          class="text-6xl font-bold text-teal-600 tracking-tight text-left sm:text-center mb-2"
-        >
-          Ernesto Rangel
-        </h1>
-        <h2
-          class="text-2xl font-medium text-gray-300 pl-1 text-left sm:text-center mb-6"
-        >
-          Software Engineer
-        </h2>
-        <ul
-          class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center pl-2 sm:pl-0 sm:items-center w-full"
-        >
-          <li v-for="(link, index) in socialLinks" :key="index">
-            <a
-              :href="link.href"
-              target="_blank"
-              class="flex items-center gap-2 text-xl text-gray-400 cursor-pointer hover:text-gray-200 hover:px-4 hover:py-2 hover:bg-white/10 hover:rounded-full transition-all duration-300 ease-in-out"
-            >
-              <Icon :icon="link.icon" size="lg" color="#fafafa" />
-              {{ link.displayName }}
-            </a>
-          </li>
-        </ul>
+        <img
+          src="@/assets/images/pp-small.jpg"
+          alt="Ernesto Rangel"
+          class="w-28 h-28 sm:w-44 sm:h-44 rounded-full object-cover border-2 border-teal-600/50 shadow-lg shadow-teal-600/20"
+        />
+        <div class="flex flex-col items-center sm:items-start">
+          <h1
+            class="text-3xl sm:text-6xl font-bold text-teal-600 tracking-tight mb-2"
+          >
+            Ernesto Rangel
+          </h1>
+          <h2 class="text-base sm:text-2xl font-medium text-gray-300 mb-6">
+            Software Engineer
+          </h2>
+          <ul class="flex flex-col sm:flex-row gap-3 sm:gap-8">
+            <li v-for="(link, index) in socialLinks" :key="index">
+              <a
+                :href="link.href"
+                target="_blank"
+                class="flex items-center gap-2 text-base sm:text-xl text-gray-400 cursor-pointer hover:text-gray-200 hover:px-4 hover:py-2 hover:bg-white/10 hover:rounded-full transition-all duration-300 ease-in-out"
+              >
+                <Icon :icon="link.icon" size="md" color="#fafafa" />
+                {{ link.displayName }}
+              </a>
+            </li>
+          </ul>
+        </div>
       </main>
     </div>
   </Transition>
