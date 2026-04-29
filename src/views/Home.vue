@@ -19,7 +19,7 @@
       ></div>
 
       <main
-        class="min-h-screen flex flex-col items-center justify-center px-4 z-10"
+        class="min-h-screen flex flex-col sm:items-center justify-center gap-2 px-12 z-10"
       >
         <h1
           class="text-6xl font-bold text-teal-600 tracking-tight text-left sm:text-center mb-2"
@@ -27,12 +27,12 @@
           Ernesto Rangel
         </h1>
         <h2
-          class="text-2xl font-medium text-gray-300 text-left sm:text-center mb-6"
+          class="text-2xl font-medium text-gray-300 pl-1 text-left sm:text-center mb-6"
         >
-          Engenheiro de Software
+          Software Engineer
         </h2>
         <ul
-          class="flex flex-col sm:flex-row gap-1 sm:gap-8 justify-center items-center w-full"
+          class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center pl-2 sm:pl-0 sm:items-center w-full"
         >
           <li v-for="(link, index) in socialLinks" :key="index">
             <a
