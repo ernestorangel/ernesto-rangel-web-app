@@ -2,7 +2,9 @@
   <Transition>
     <div class="relative min-h-screen overflow-hidden bg-[#00141d]">
       <!-- 1. Textura / Padrão de Pontos -->
-      <div class="absolute inset-0 z-0 opacity-10 bg-dots"></div>
+      <div
+        class="absolute inset-0 z-0 opacity-10 bg-dots pointer-events-none"
+      ></div>
 
       <!-- 2. Luzes Ambiente (Glow/Blobs) -->
       <div
@@ -16,7 +18,9 @@
         "
       ></div>
 
-      <main class="min-h-screen flex flex-col items-center justify-center px-4">
+      <main
+        class="min-h-screen flex flex-col items-center justify-center px-4 z-10"
+      >
         <h1
           class="text-6xl font-bold text-teal-600 tracking-tight text-left sm:text-center mb-2"
         >
