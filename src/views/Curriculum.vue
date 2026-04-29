@@ -11,10 +11,10 @@
             'w-full md:w-[260px]',
             'flex items-center justify-center',
             'p-4 rounded-lg',
-            'bg-white/10 backdrop-blur-sm',
-            'text-[#FAFAFA]',
-            'hover:border-[#00D957] hover:text-[#00D957]',
-            'border border-white/30',
+            'bg-theme-surface backdrop-blur-sm',
+            'text-theme-text',
+            'hover:border-theme-accent hover:text-theme-accent',
+            'border border-theme-border-lg',
           ]"
         >
           Acessar CV em PDF
@@ -31,7 +31,7 @@
             v-for="experience in professionalHistory"
             :class="[
               'flex flex-col md:flex-row gap-4',
-              'rounded-lg bg-white/10 border border-white/30',
+              'rounded-lg bg-theme-surface border border-theme-border-lg',
             ]"
           >
             <div
@@ -40,40 +40,40 @@
                 'flex flex-col',
                 'gap-4 p-8',
                 'border-b md:border-b-0 md:border-r',
-                'border-[#454545]',
+                'border-theme-border-md',
               ]"
             >
               <div
-                class="flex items-center gap-2 text-sm sm:text-lg whitespace-nowrap"
+                class="flex items-center gap-2 text-sm sm:text-lg whitespace-nowrap text-theme-text"
               >
-                <Icon icon="calendar" size="sm" color="#FAFAFA" />
+                <Icon icon="calendar" size="sm" />
                 <div>{{ experience.from }} - {{ experience.to }}</div>
               </div>
               <div class="flex flex-col gap-4">
                 <div
-                  class="flex items-center gap-2 text-sm md:text-lg text-[#717171]"
+                  class="flex items-center gap-2 text-sm md:text-lg text-theme-muted"
                 >
-                  <Icon icon="company" size="sm" color="#717171" />
+                  <Icon icon="company" size="sm" />
                   {{ experience.company }}
                 </div>
                 <div
-                  class="flex items-center gap-2 text-sm md:text-lg text-[#717171]"
+                  class="flex items-center gap-2 text-sm md:text-lg text-theme-muted"
                 >
-                  <Icon icon="location" size="sm" color="#717171" />
+                  <Icon icon="location" size="sm" />
                   {{ experience.location }} ({{ experience.mode }})
                 </div>
               </div>
             </div>
             <div class="p-8 flex flex-col gap-4">
               <div class="flex flex-col font-bold text-lg">
-                <div class="text-[#00D957]">{{ experience.title }}</div>
+                <div class="text-theme-accent">{{ experience.title }}</div>
               </div>
 
               <div>
                 <ul class="flex flex-col list-disc pl-4 gap-2">
                   <li
                     v-for="item in experience.description"
-                    class="font-light text-[#999999]"
+                    class="font-light text-theme-subtle"
                   >
                     {{ item }}
                   </li>
@@ -84,7 +84,7 @@
                 <ul class="flex gap-2 flex-wrap">
                   <li
                     v-for="tags in experience.tags"
-                    class="whitespace-nowrap py-1 px-4 rounded-lg text-sm text-[#AAC8E4] bg-gray-700"
+                    class="whitespace-nowrap py-1 px-4 rounded-lg text-sm text-theme-tag-text bg-theme-tag-bg"
                   >
                     {{ tags }}
                   </li>
@@ -102,14 +102,14 @@
             v-for="experience in academicHistory"
             :class="[
               'flex flex-col gap-2',
-              'p-8 rounded-lg bg-white/10 border border-white/30',
+              'p-8 rounded-lg bg-theme-surface border border-theme-border-lg',
             ]"
           >
             <div class="flex flex-col font-bold text-lg">
               <div class="flex gap-2">
                 <div>{{ experience.from }} - {{ experience.to }}</div>
               </div>
-              <div class="text-[#00D957]">{{ experience.title }}</div>
+              <div class="text-theme-accent">{{ experience.title }}</div>
             </div>
 
             <div class="flex gap-2">
@@ -124,7 +124,7 @@
               <ul class="flex gap-2 flex-wrap">
                 <li
                   v-for="tags in experience.tags"
-                  class="py-1 px-4 rounded-lg text-sm text-[#AAC8E4] bg-gray-700"
+                  class="py-1 px-4 rounded-lg text-sm text-theme-tag-text bg-theme-tag-bg"
                 >
                   {{ tags }}
                 </li>
@@ -144,14 +144,14 @@
             v-for="experience in coursesHistory"
             :class="[
               'flex flex-col gap-2',
-              'p-8 rounded-lg bg-white/10 border border-white/30',
+              'p-8 rounded-lg bg-theme-surface border border-theme-border-lg',
             ]"
           >
             <div class="flex flex-col font-bold text-lg">
               <div class="flex gap-2">
                 <div>{{ experience.from }} - {{ experience.to }}</div>
               </div>
-              <div class="text-[#00D957]">{{ experience.title }}</div>
+              <div class="text-theme-accent">{{ experience.title }}</div>
             </div>
 
             <div class="flex gap-2">
@@ -166,7 +166,7 @@
               <ul class="flex gap-2 flex-wrap">
                 <li
                   v-for="tags in experience.tags"
-                  class="whitespace-nowrap py-1 px-4 rounded-lg text-sm text-[#AAC8E4] bg-gray-700"
+                  class="whitespace-nowrap py-1 px-4 rounded-lg text-sm text-theme-tag-text bg-theme-tag-bg"
                 >
                   {{ tags }}
                 </li>
@@ -183,11 +183,11 @@
             v-for="experience in languages"
             :class="[
               'flex flex-col gap-2',
-              'p-8 rounded-lg bg-white/10 border border-white/30',
+              'p-8 rounded-lg bg-theme-surface border border-theme-border-lg',
             ]"
           >
             <div class="flex flex-col font-bold text-lg">
-              <div class="text-[#00D957]">
+              <div class="text-theme-accent">
                 {{ experience.name }}
               </div>
             </div>

@@ -2,9 +2,9 @@
   <NavList class="hidden lg:flex h-full" />
   <button
     @click="openDrawer"
-    class="h-full px-4 lg:hidden backdrop-blur-sm border-b border-white/30"
+    class="h-full px-4 lg:hidden backdrop-blur-sm border-b border-theme-border-lg text-theme-text"
   >
-    <Icon icon="hamburger-menu" size="sm" color="#fafafa" />
+    <Icon icon="hamburger-menu" size="sm" />
   </button>
   <Drawer :drawer="drawer" @open="openDrawer" @close="closeDrawer">
     <template v-slot:content>

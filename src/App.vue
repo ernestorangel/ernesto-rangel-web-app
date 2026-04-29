@@ -1,10 +1,11 @@
 <template>
-  <div class="h-full bg-[#00141d] text-[#FAFAFA]">
+  <div class="h-full bg-theme-bg text-theme-text">
     <!-- <AppBar /> -->
     <Transition>
       <AppContent />
     </Transition>
     <!-- <AppFooter /> -->
+    <ThemeToggle class="fixed top-6 right-6 z-50" />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import AppBar from "./layouts/AppBar.vue";
 import AppContent from "./layouts/AppContent.vue";
 import AppFooter from "./layouts/AppFooter.vue";
+import ThemeToggle from "./components/ThemeToggle.vue";
 </script>
 
 <style>
@@ -33,10 +35,5 @@ import AppFooter from "./layouts/AppFooter.vue";
 
 .legibility {
   text-rendering: optimizeLegibility;
-}
-
-.bg-img {
-  /* background-image: url('./assets/images/bg-img.svg'); */
-  background-color: #00141d;
 }
 </style>

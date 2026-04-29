@@ -7,7 +7,7 @@
   >
     <div class="flex flex-col w-full gap-2">
       <span class="text-4xl"> Quer entrar em contato comigo? </span>
-      <span class="text-lg font-light text-[#777777]">
+      <span class="text-lg font-light text-theme-muted">
         Deixe uma mensagem ou utilize um dos canais abaixo.
       </span>
     </div>
@@ -16,8 +16,8 @@
         :class="[
           'w-full sm:w-2/3 h-full',
           'flex flex-col',
-          'border border-white/30',
-          'bg-white/10',
+          'border border-theme-border-lg',
+          'bg-theme-surface',
           'rounded-lg p-4 lg:p-8 gap-8',
         ]"
       >
@@ -34,7 +34,7 @@
                 id="name"
                 name="name"
                 type="text"
-                class="rounded-lg p-2 bg-black/40 border border-white/30 outline-[#00D957] font-extralight"
+                class="rounded-lg p-2 bg-theme-input-bg border border-theme-border-lg outline-theme-accent font-extralight"
               />
             </div>
 
@@ -45,7 +45,7 @@
                 id="email"
                 name="email"
                 type="text"
-                class="rounded-lg p-2 bg-black/40 border border-white/30"
+                class="rounded-lg p-2 bg-theme-input-bg border border-theme-border-lg"
               />
             </div>
 
@@ -57,13 +57,13 @@
                 id="message"
                 name="message"
                 type="textarea"
-                class="rounded-lg p-2 bg-black/40 border border-white/30"
+                class="rounded-lg p-2 bg-theme-input-bg border border-theme-border-lg"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              class="p-4 rounded-lg bg-[#00D957] hover:bg-[#159046]"
+              class="p-4 rounded-lg bg-theme-accent hover:bg-theme-accent-hover"
             >
               Enviar
             </button>
@@ -79,13 +79,13 @@
             v-else-if="status == 'sent'"
             class="w-full h-[620px] flex flex-col items-center justify-center gap-4"
           >
-            <div class="border-2 border-[#00D957] rounded-full p-4">
-              <Icon icon="check" size="lg" color="#00D957" />
+            <div class="border-2 border-theme-accent rounded-full p-4 text-theme-accent">
+              <Icon icon="check" size="lg" />
             </div>
             Enviado!
             <button
               @click="setReadyStatus"
-              class="text-sm text-[#717171] hover:text-[#00D957]"
+              class="text-sm text-theme-muted hover:text-theme-accent"
             >
               Clique aqui para enviar outro
             </button>
@@ -98,24 +98,24 @@
           v-for="contact in contactOptions"
           :class="[
             'flex flex-col',
-            'bg-white/10',
+            'bg-theme-surface',
             'p-8 sm:p-4 lg:p-8 gap-4',
-            'border border-white/30 rounded-md',
+            'border border-theme-border-lg rounded-md',
           ]"
         >
           <span
             :class="[
               'flex items-center gap-4',
               'text-sm lg:text-lg',
-              'font-bold text-[#717171]',
+              'font-bold text-theme-muted',
             ]"
           >
-            <Icon :icon="contact.icon" size="sm" color="#717171" />
+            <Icon :icon="contact.icon" size="sm" />
             {{ contact.name }}
           </span>
           <a
             :href="contact.href"
-            :class="['text-sm lg:text-lg', 'font-light hover:text-[#00D957]']"
+            :class="['text-sm lg:text-lg', 'font-light hover:text-theme-accent']"
           >
             {{ contact.value }}
           </a>
@@ -228,9 +228,9 @@ async function submitForm() {
 .loader:before,
 .loader:after {
   background:
-    radial-gradient(closest-side at 50% 12.5%, #00d957 96%, #0000) 50% 0/20% 80%
+    radial-gradient(closest-side at 50% 12.5%, var(--color-accent) 96%, #0000) 50% 0/20% 80%
       repeat-y,
-    radial-gradient(closest-side at 12.5% 50%, #00d957 96%, #0000) 0 50%/80% 20%
+    radial-gradient(closest-side at 12.5% 50%, var(--color-accent) 96%, #0000) 0 50%/80% 20%
       repeat-x;
 }
 

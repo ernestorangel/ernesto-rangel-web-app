@@ -20,3 +20,113 @@
     "Noto Color Emoji";
   box-sizing: border-box;
 }
+
+/* ─── Light theme (default — .dark absent) ─── */
+:root {
+  --color-bg-primary:    #F0F4F7;
+  --color-bg-secondary:  #E2E8ED;
+  --color-bg-tertiary:   #D6DDE4;
+  --color-bg-quaternary: #CBD3DC;
+  --color-surface:       rgba(0, 0, 0, 0.05);
+  --color-surface-hover: rgba(0, 0, 0, 0.10);
+
+  --color-text-primary:   #0D1B26;
+  --color-text-secondary: #374151;
+  --color-text-muted:     #6B7280;
+  --color-text-dimmed:    #9CA3AF;
+  --color-text-subtle:    #4B5563;
+
+  --color-accent:       #00C44E;
+  --color-accent-hover: #008C38;
+  --color-accent-soft:  #00b347;
+
+  --color-border:    rgba(0, 0, 0, 0.08);
+  --color-border-md: rgba(0, 0, 0, 0.12);
+  --color-border-lg: rgba(0, 0, 0, 0.18);
+
+  --color-tag-text: #1E4D72;
+  --color-tag-bg:   rgba(203, 213, 225, 0.70);
+
+  --color-input-bg: rgba(255, 255, 255, 0.70);
+
+  color-scheme: light;
+}
+
+/* ─── Dark theme ─── */
+html.dark {
+  --color-bg-primary:    #00141d;
+  --color-bg-secondary:  #171717;
+  --color-bg-tertiary:   #242424;
+  --color-bg-quaternary: #272727;
+  --color-surface:       rgba(255, 255, 255, 0.10);
+  --color-surface-hover: rgba(255, 255, 255, 0.20);
+
+  --color-text-primary:   #FAFAFA;
+  --color-text-secondary: #BCBCBC;
+  --color-text-muted:     #717171;
+  --color-text-dimmed:    #505050;
+  --color-text-subtle:    #999999;
+
+  --color-accent:       #00D957;
+  --color-accent-hover: #159046;
+  --color-accent-soft:  #1ad367;
+
+  --color-border:    rgba(255, 255, 255, 0.10);
+  --color-border-md: rgba(255, 255, 255, 0.20);
+  --color-border-lg: rgba(255, 255, 255, 0.30);
+
+  --color-tag-text: #AAC8E4;
+  --color-tag-bg:   rgba(55, 65, 81, 0.60);
+
+  --color-input-bg: rgba(0, 0, 0, 0.40);
+
+  color-scheme: dark;
+}
+
+/* ─── Semantic utility classes (bypass Tailwind color opacity processing) ─── */
+@layer utilities {
+  /* Backgrounds */
+  .bg-theme-bg            { background-color: var(--color-bg-primary); }
+  .bg-theme-bg-2          { background-color: var(--color-bg-secondary); }
+  .bg-theme-bg-3          { background-color: var(--color-bg-tertiary); }
+  .bg-theme-bg-4          { background-color: var(--color-bg-quaternary); }
+  .bg-theme-surface       { background-color: var(--color-surface); }
+  .bg-theme-surface-hover { background-color: var(--color-surface-hover); }
+  .bg-theme-accent        { background-color: var(--color-accent); }
+  .bg-theme-accent-hover  { background-color: var(--color-accent-hover); }
+  .bg-theme-tag-bg        { background-color: var(--color-tag-bg); }
+  .bg-theme-input-bg      { background-color: var(--color-input-bg); }
+
+  /* Text */
+  .text-theme-text        { color: var(--color-text-primary); }
+  .text-theme-text-2      { color: var(--color-text-secondary); }
+  .text-theme-muted       { color: var(--color-text-muted); }
+  .text-theme-dimmed      { color: var(--color-text-dimmed); }
+  .text-theme-subtle      { color: var(--color-text-subtle); }
+  .text-theme-accent      { color: var(--color-accent); }
+  .text-theme-accent-soft { color: var(--color-accent-soft); }
+  .text-theme-tag-text    { color: var(--color-tag-text); }
+
+  /* Borders */
+  .border-theme-border    { border-color: var(--color-border); }
+  .border-theme-border-md { border-color: var(--color-border-md); }
+  .border-theme-border-lg { border-color: var(--color-border-lg); }
+  .border-theme-accent    { border-color: var(--color-accent); }
+
+  /* Outline */
+  .outline-theme-accent   { outline-color: var(--color-accent); }
+}
+
+/* ─── Smooth theme transition ─── */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+/* Disable transitions on initial page load to prevent flash */
+html.no-transition *,
+html.no-transition *::before,
+html.no-transition *::after {
+  transition: none !important;
+}

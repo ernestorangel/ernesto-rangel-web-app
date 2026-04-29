@@ -11,7 +11,7 @@
           'w-full h-full text-sm',
           'cursor-pointer',
           'transition duration-300 ease-in-out',
-          'hover:bg-white/20 lg:backdrop-blur-sm',
+          'hover:bg-theme-surface-hover lg:backdrop-blur-sm',
           `lg:border-b ${isCurrentRouteCSS(route.path)}`,
         ]"
       >
@@ -19,7 +19,6 @@
       </li>
     </ul>
     <div class="w-full flex pt-8 lg:pt-0 px-24 lg:px-0">
-      <!-- TODO: Implementar toggle de dark mode e select de linguagem -->
       <ul class="w-full flex flex-row items-center justify-center">
         <li
           v-for="(link, index) in socialLinks"
@@ -28,14 +27,15 @@
           :class="[
             'flex items-center justify-center',
             'py-4 lg:px-4 lg:py-0',
-            'w-full h-full text-sm ',
+            'w-full h-full text-sm',
             'cursor-pointer',
-            'lg:border-b border-white/30 lg:backdrop-blur-sm',
+            'lg:border-b border-theme-border-lg lg:backdrop-blur-sm',
             'transition duration-300 ease-in-out',
-            'hover:bg-white/20',
+            'hover:bg-theme-surface-hover',
+            'text-theme-text',
           ]"
         >
-          <Icon :icon="link.icon" size="sm" color="#fafafa" />
+          <Icon :icon="link.icon" size="sm" />
         </li>
       </ul>
     </div>
@@ -84,9 +84,9 @@ function forwardTo(destination) {
 
 function isCurrentRouteCSS(refPath) {
   if (router.currentRoute.value.path == refPath) {
-    return "text-[#00D957] !border-[#00D957]";
+    return "text-theme-accent !border-theme-accent";
   }
-  return "!border-white/30";
+  return "!border-theme-border-lg";
 }
 
 function capitalizeFirstLetter(val) {
