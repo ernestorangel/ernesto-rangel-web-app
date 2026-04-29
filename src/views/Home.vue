@@ -1,21 +1,19 @@
 <template>
   <Transition>
-    <div class="relative min-h-screen overflow-hidden bg-[#00141d]">
-      <!-- 1. Textura / Padrão de Pontos -->
+    <div class="relative min-h-screen overflow-hidden bg-theme-bg">
+      <!-- Dot pattern -->
       <div
         class="absolute inset-0 z-0 opacity-10 bg-dots pointer-events-none"
       ></div>
 
-      <!-- 2. Luzes Ambiente (Glow/Blobs) -->
+      <!-- Glow blobs -->
       <div
         class="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-teal-600 opacity-20 blur-[100px] md:blur-[140px] z-0 pointer-events-none"
         style="animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite"
       ></div>
       <div
         class="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-cyan-600 opacity-15 blur-[120px] md:blur-[160px] z-0 pointer-events-none"
-        style="
-          animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite reverse;
-        "
+        style="animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite reverse"
       ></div>
 
       <main
@@ -28,11 +26,11 @@
         />
         <div class="flex flex-col items-center sm:items-start">
           <h1
-            class="text-3xl sm:text-6xl font-bold text-teal-600 tracking-tight mb-2"
+            class="text-3xl sm:text-6xl font-bold text-theme-accent tracking-tight mb-2"
           >
             Ernesto Rangel
           </h1>
-          <h2 class="text-base sm:text-2xl font-medium text-gray-300 mb-6">
+          <h2 class="text-base sm:text-2xl font-medium text-theme-text-2 mb-6">
             Software Engineer
           </h2>
           <ul class="flex flex-col sm:flex-row gap-3 sm:gap-8">
@@ -40,9 +38,9 @@
               <a
                 :href="link.href"
                 target="_blank"
-                class="flex items-center gap-2 text-base sm:text-xl text-gray-400 cursor-pointer hover:text-gray-200 hover:px-4 hover:py-2 hover:bg-white/10 hover:rounded-full transition-all duration-300 ease-in-out"
+                class="flex items-center gap-2 text-base sm:text-xl text-theme-text-2 cursor-pointer py-2 hover:text-theme-text hover:px-4 hover:bg-theme-surface hover:rounded-full transition-all duration-300 ease-in-out"
               >
-                <Icon :icon="link.icon" size="md" color="#fafafa" />
+                <Icon :icon="link.icon" size="md" />
                 {{ link.displayName }}
               </a>
             </li>
@@ -55,7 +53,6 @@
 
 <script setup>
 import Icon from "../components/Icon.vue";
-import ProfileCard from "../components/ProfileCard.vue";
 
 const socialLinks = [
   {

@@ -1,11 +1,11 @@
 <template>
-    <div 
+    <div
         :class="[
-            'flex flex-col items-center justify-center', 
+            'flex flex-col items-center justify-center',
             'sm:flex-row sm:justify-between',
             'h-[110px] px-8 lg:px-24',
-            'bg-white/10 backdrop-blur-sm text-[#fafafa]',
-            'border-t border-white/30 shadow xl'
+            'bg-theme-surface backdrop-blur-sm text-theme-text',
+            'border-t border-theme-border-lg shadow xl'
         ]"
     >
         <Logo size="16" type="faded" class="hidden sm:flex" />

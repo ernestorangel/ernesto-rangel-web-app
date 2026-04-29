@@ -5,6 +5,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ernesto Rangel</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('ernesto-rangel-theme');
+      var preferred = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (preferred === 'dark') document.documentElement.classList.add('dark');
+      document.documentElement.classList.add('no-transition');
+      window.addEventListener('DOMContentLoaded', function () {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            document.documentElement.classList.remove('no-transition');
+          });
+        });
+      });
+    })();
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -1,10 +1,11 @@
 <template>
-    <div 
+    <div
         :class="[
             'sticky top-0 h-[85px] z-50',
             'w-full',
             'flex flex-row items-center',
-            'bg-white/10 text-[#fafafa]'
+            'bg-theme-surface text-theme-text backdrop-blur-sm',
+            'border-b border-theme-border-lg',
         ]"
     >
         <Spacer w="hidden xl:flex xl:min-w-[100px]" ></Spacer>

@@ -2,30 +2,30 @@
     <div :class="flexProps[props.mode].container" >
         <div
             v-if="props.image"
-            :class="flexProps[props.mode].imageContainer" 
+            :class="flexProps[props.mode].imageContainer"
         >
-            <img 
-                :src="props.image" 
-                :class="flexProps[props.mode].image" 
+            <img
+                :src="props.image"
+                :class="flexProps[props.mode].image"
             />
         </div>
         <div :class="flexProps[props.mode].infoContainer">
-            <div 
-                v-if="props.title" 
+            <div
+                v-if="props.title"
                 :class="flexProps[props.mode].title"
             >
                 {{ props.title }}
             </div>
-            <div 
-                v-if="props.content" 
+            <div
+                v-if="props.content"
                 :class="flexProps[props.mode].content"
             >
                 <span>
                     {{ props.content }}
                 </span>
             </div>
-            <a 
-                v-if="props.action" 
+            <a
+                v-if="props.action"
                 :href="props.action.path"
                 :class="flexProps[props.mode].action"
             >
@@ -39,10 +39,10 @@
 import { useRouter } from 'vue-router';
 
 const props = defineProps([
-    'title', 
-    'image', 
-    'content', 
-    'action', 
+    'title',
+    'image',
+    'content',
+    'action',
     'mode',
     'heigth',
     'width'
@@ -54,7 +54,7 @@ const flexProps = {
             `w-[${props.width}px] h-[${props.heigth}px]`,
             'flex flex-row',
             'border rounded-lg',
-            'bg-[#171717] border-[#272727]'
+            'bg-theme-bg-2 border-theme-bg-4'
         ],
         imageContainer: ['w-full overflow-hidden'],
         image: ['rounded-l-lg'],
@@ -64,7 +64,7 @@ const flexProps = {
         action: [
             'flex justify-end',
             'px-8 py-4',
-            'cursor-pointer hover:text-[#00D957]'
+            'cursor-pointer hover:text-theme-accent'
         ]
     },
     vertical: {
@@ -72,21 +72,20 @@ const flexProps = {
             `w-[${props.width}px] h-[${props.heigth}px]`,
             'flex flex-col',
             'border rounded-lg',
-            'bg-[#242424] border-[#454545]'
+            'bg-theme-bg-3 border-theme-border-md'
         ],
         imageContainer: ['w-full max-h-80 overflow-hidden'],
         image: ['rounded-t-lg'],
         infoContainer: ['w-full'],
-        title: ['px-8 py-4 font-bold text-xl text-[#00D957]'],
+        title: ['px-8 py-4 font-bold text-xl text-theme-accent'],
         content: ['px-8 py-4'],
         action: [
             'flex justify-end',
             'px-8 py-4',
-            'cursor-pointer text-[#AAC8E4] hover:text-[#00D957]'
+            'cursor-pointer text-theme-tag-text hover:text-theme-accent'
         ]
     }
 }
-
 
 const router = useRouter()
 

@@ -3,22 +3,22 @@
     :class="[
       'flex flex-col',
       'md:flex-row lg:w-[790px]',
-      'lg:bg-gray-800/60 lg:border border-white/30 lg:rounded-xl',
+      'lg:bg-gray-800/60 lg:border border-theme-border-lg lg:rounded-xl',
       'lg:backdrop-blur-sm',
     ]"
   >
     <div class="w-full flex flex-col gap-8 p-16">
       <div class="flex flex-col gap-1">
         <div class="text-6xl font-bold">{{ textContent.name }}</div>
-        <div class="flex items-center gap-1">
-          <Icon icon="location" size="sm" color="#ffffff" />
-          <div class="text-lg text-[#ffffff]">{{ textContent.location }}</div>
+        <div class="flex items-center gap-1 text-theme-text">
+          <Icon icon="location" size="sm" />
+          <div class="text-lg">{{ textContent.location }}</div>
         </div>
       </div>
       <div
-        class="text-lg font-light text-[#ffffff] subpixel-antialiased legibility"
+        class="text-lg font-light text-theme-text subpixel-antialiased legibility"
       >
-        <strong class="text-[#1ad367]">{{ textContent.ocupation }}</strong>
+        <strong class="text-theme-accent-soft">{{ textContent.ocupation }}</strong>
         {{ textContent.description }}
       </div>
       <div class="flex flex-col gap-2">
@@ -27,7 +27,7 @@
           <ul class="flex gap-3 flex-wrap">
             <li
               v-for="item in proficiencies"
-              class="whitespace-nowrap py-1 px-4 rounded-lg text-lg text-[#AAC8E4] bg-gray-700/60"
+              class="whitespace-nowrap py-1 px-4 rounded-lg text-lg text-theme-tag-text bg-theme-tag-bg"
             >
               {{ item.label }}
             </li>
@@ -57,33 +57,12 @@ const textContent = {
 };
 
 const proficiencies = [
-  {
-    index: 0,
-    label: "Vue.js",
-  },
-  {
-    index: 1,
-    label: "Vuetify",
-  },
-  {
-    index: 2,
-    label: "JavaScript",
-  },
-  {
-    index: 3,
-    label: "TypeScript",
-  },
-  {
-    index: 4,
-    label: "Tailwind CSS",
-  },
-  {
-    index: 5,
-    label: "HTML",
-  },
-  {
-    index: 6,
-    label: "CSS",
-  },
+  { index: 0, label: "Vue.js" },
+  { index: 1, label: "Vuetify" },
+  { index: 2, label: "JavaScript" },
+  { index: 3, label: "TypeScript" },
+  { index: 4, label: "Tailwind CSS" },
+  { index: 5, label: "HTML" },
+  { index: 6, label: "CSS" },
 ];
 </script>
