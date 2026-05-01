@@ -3,46 +3,40 @@
 @tailwind utilities;
 
 * {
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Helvetica Neue,
-    Arial,
-    Noto Sans,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    Segoe UI Symbol,
-    "Noto Color Emoji";
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  background-color: var(--color-bg-primary);
+  background-image: var(--color-bg-grad);
+  min-height: 100vh;
 }
 
 /* ─── Light theme (default — .dark absent) ─── */
 :root {
-  --color-bg-primary:    #F0F4F7;
-  --color-bg-secondary:  #E2E8ED;
-  --color-bg-tertiary:   #D6DDE4;
-  --color-bg-quaternary: #CBD3DC;
-  --color-surface:       rgba(0, 0, 0, 0.05);
-  --color-surface-hover: rgba(0, 0, 0, 0.10);
+  --color-bg-primary:    #f4f8f6;
+  --color-bg-secondary:  #e6efea;
+  --color-bg-tertiary:   #d9e6de;
+  --color-bg-quaternary: #ccd9cf;
+  --color-bg-grad:       none;
+  --color-surface:       rgba(0, 0, 0, 0.04);
+  --color-surface-hover: rgba(0, 0, 0, 0.08);
 
-  --color-text-primary:   #0D1B26;
-  --color-text-secondary: #374151;
-  --color-text-muted:     #6B7280;
-  --color-text-dimmed:    #9CA3AF;
-  --color-text-subtle:    #4B5563;
+  --color-text-primary:   #0a1f24;
+  --color-text-secondary: #2d4a45;
+  --color-text-muted:     #5b7570;
+  --color-text-dimmed:    #8aa39f;
+  --color-text-subtle:    #3d5c57;
 
-  --color-accent:       #00C44E;
-  --color-accent-hover: #008C38;
-  --color-accent-soft:  #00b347;
+  --color-accent:       #009f3e;
+  --color-accent-hover: #007c30;
+  --color-accent-soft:  rgba(0, 159, 62, 0.10);
 
-  --color-border:    rgba(0, 0, 0, 0.08);
-  --color-border-md: rgba(0, 0, 0, 0.12);
-  --color-border-lg: rgba(0, 0, 0, 0.18);
+  --color-rule:          #cfdcd6;
+  --color-border:        rgba(0, 0, 0, 0.08);
+  --color-border-md:     rgba(0, 0, 0, 0.12);
+  --color-border-lg:     rgba(0, 0, 0, 0.18);
 
   --color-tag-text: #1E4D72;
   --color-tag-bg:   rgba(203, 213, 225, 0.70);
@@ -55,25 +49,27 @@
 /* ─── Dark theme ─── */
 html.dark {
   --color-bg-primary:    #00141d;
-  --color-bg-secondary:  #171717;
-  --color-bg-tertiary:   #242424;
-  --color-bg-quaternary: #272727;
-  --color-surface:       rgba(255, 255, 255, 0.10);
-  --color-surface-hover: rgba(255, 255, 255, 0.20);
+  --color-bg-secondary:  #0a2128;
+  --color-bg-tertiary:   #112730;
+  --color-bg-quaternary: #1a3038;
+  --color-bg-grad:       radial-gradient(ellipse at top left, #022b30 0%, #00141d 55%);
+  --color-surface:       rgba(255, 255, 255, 0.06);
+  --color-surface-hover: rgba(255, 255, 255, 0.12);
 
-  --color-text-primary:   #FAFAFA;
-  --color-text-secondary: #BCBCBC;
-  --color-text-muted:     #717171;
-  --color-text-dimmed:    #505050;
-  --color-text-subtle:    #999999;
+  --color-text-primary:   #e6f1ec;
+  --color-text-secondary: #b8d4ce;
+  --color-text-muted:     #7a9c9a;
+  --color-text-dimmed:    #4d7070;
+  --color-text-subtle:    #99b8b4;
 
-  --color-accent:       #00D957;
-  --color-accent-hover: #159046;
-  --color-accent-soft:  #1ad367;
+  --color-accent:       #00d957;
+  --color-accent-hover: #00b848;
+  --color-accent-soft:  rgba(0, 217, 87, 0.14);
 
-  --color-border:    rgba(255, 255, 255, 0.10);
-  --color-border-md: rgba(255, 255, 255, 0.20);
-  --color-border-lg: rgba(255, 255, 255, 0.30);
+  --color-rule:          #143038;
+  --color-border:        rgba(255, 255, 255, 0.08);
+  --color-border-md:     rgba(255, 255, 255, 0.14);
+  --color-border-lg:     rgba(255, 255, 255, 0.22);
 
   --color-tag-text: #AAC8E4;
   --color-tag-bg:   rgba(55, 65, 81, 0.60);
@@ -112,9 +108,13 @@ html.dark {
   .border-theme-border-md { border-color: var(--color-border-md); }
   .border-theme-border-lg { border-color: var(--color-border-lg); }
   .border-theme-accent    { border-color: var(--color-accent); }
+  .border-theme-rule      { border-color: var(--color-rule); }
 
   /* Outline */
   .outline-theme-accent   { outline-color: var(--color-accent); }
+
+  /* Accent soft background */
+  .bg-theme-accent-soft   { background-color: var(--color-accent-soft); }
 }
 
 /* ─── Smooth theme transition ─── */
