@@ -1,6 +1,5 @@
 <template>
   <main class="site-main">
-
     <!-- ── Hero ── -->
     <section id="hero" class="hero">
       <div class="hero__left">
@@ -9,21 +8,26 @@
           {{ t.ui.available }}
         </div>
         <h1 class="hero__headline">
-          {{ t.ui.heroLead }}<br />
-          <em>{{ t.ui.heroAdj1 }}</em>
-          <em>{{ t.ui.heroAdj2 }}</em>
-          <br />{{ t.ui.heroAndFast }}
-          <em>{{ t.ui.heroAdj3 }}</em>
+          {{ t.ui.heroLead }}
+          <em>{{ t.ui.heroAdj1 }}&nbsp;</em>
+          <em>{{ t.ui.heroAdj2 }}&nbsp;</em>
+          {{ t.ui.heroAndFast }}&nbsp;<em>{{ t.ui.heroAdj3 }}</em>
         </h1>
         <div class="hero__ctas">
-          <a :href="`mailto:${t.email}`" class="btn-primary">{{ t.ui.ctaContact }}</a>
+          <a :href="`mailto:${t.email}`" class="btn-primary">{{
+            t.ui.ctaContact
+          }}</a>
           <a href="#work" class="btn-ghost">{{ t.ui.ctaWork }}</a>
         </div>
       </div>
 
       <div class="hero__right">
         <div class="hero__avatar-wrap">
-          <img src="@/assets/images/avatar-square.png" :alt="t.name" class="hero__avatar" />
+          <img
+            src="@/assets/images/pp-small.jpg"
+            :alt="t.name"
+            class="hero__avatar"
+          />
         </div>
         <div class="hero__intro">
           <p class="hero__eyebrow">{{ t.ui.heroIntroEyebrow }}</p>
@@ -31,9 +35,21 @@
         </div>
         <p class="hero__subhead">{{ t.ui.subhead }}</p>
         <div class="hero__socials">
-          <a :href="t.githubUrl" target="_blank" rel="noopener" class="hero__social-link">↗ GitHub</a>
+          <a
+            :href="t.githubUrl"
+            target="_blank"
+            rel="noopener"
+            class="hero__social-link"
+            >↗ GitHub</a
+          >
           <span class="hero__social-sep">·</span>
-          <a :href="t.linkedinUrl" target="_blank" rel="noopener" class="hero__social-link">↗ LinkedIn</a>
+          <a
+            :href="t.linkedinUrl"
+            target="_blank"
+            rel="noopener"
+            class="hero__social-link"
+            >↗ LinkedIn</a
+          >
           <span class="hero__social-sep">·</span>
           <a :href="`mailto:${t.email}`" class="hero__social-link">↗ Email</a>
         </div>
@@ -48,7 +64,9 @@
           <span class="label-index">0 1</span>
         </div>
         <div class="about__bio">
-          <p v-for="(para, i) in t.bio" :key="i" class="about__para">{{ para }}</p>
+          <p v-for="(para, i) in t.bio" :key="i" class="about__para">
+            {{ para }}
+          </p>
         </div>
         <div class="about__facts">
           <div v-for="(row, i) in miniFacts" :key="i" class="fact-row">
@@ -68,7 +86,8 @@
         </div>
         <h2 class="section-headline">
           {{ t.ui.sectionExpHeadline.pre }}
-          <strong>{{ t.ui.sectionExpHeadline.strong }}</strong>{{ t.ui.sectionExpHeadline.post }}
+          <strong>{{ t.ui.sectionExpHeadline.strong }}</strong
+          >{{ t.ui.sectionExpHeadline.post }}
         </h2>
       </div>
 
@@ -89,10 +108,14 @@
           </div>
           <div class="exp-details">
             <ul class="exp-bullets">
-              <li v-for="(b, bi) in job.bullets" :key="bi" class="exp-bullet">{{ b }}</li>
+              <li v-for="(b, bi) in job.bullets" :key="bi" class="exp-bullet">
+                {{ b }}
+              </li>
             </ul>
             <div class="exp-stack">
-              <span v-for="s in job.stack" :key="s" class="stack-pill">{{ s }}</span>
+              <span v-for="s in job.stack" :key="s" class="stack-pill">{{
+                s
+              }}</span>
             </div>
           </div>
         </div>
@@ -153,7 +176,8 @@
         <div class="contact__body">
           <h2 class="contact__headline">
             {{ t.ui.contactHeadline.pre }}
-            <br />{{ t.ui.contactHeadline.post }}<em>{{ t.ui.contactHeadline.strong }}</em>
+            <br />{{ t.ui.contactHeadline.post
+            }}<em>{{ t.ui.contactHeadline.strong }}</em>
           </h2>
           <p class="contact__blurb">{{ t.ui.contactBlurb }}</p>
           <div class="contact__links">
@@ -162,12 +186,22 @@
               <span class="contact__link-value">{{ t.email }}</span>
               <span class="contact__link-arrow">↗</span>
             </a>
-            <a :href="t.githubUrl" target="_blank" rel="noopener" class="contact__link">
+            <a
+              :href="t.githubUrl"
+              target="_blank"
+              rel="noopener"
+              class="contact__link"
+            >
               <span class="contact__link-label">{{ t.ui.labelGithub }}</span>
               <span class="contact__link-value">{{ t.github }}</span>
               <span class="contact__link-arrow">↗</span>
             </a>
-            <a :href="t.linkedinUrl" target="_blank" rel="noopener" class="contact__link">
+            <a
+              :href="t.linkedinUrl"
+              target="_blank"
+              rel="noopener"
+              class="contact__link"
+            >
               <span class="contact__link-label">{{ t.ui.labelLinkedin }}</span>
               <span class="contact__link-value">{{ t.linkedin }}</span>
               <span class="contact__link-arrow">↗</span>
@@ -182,27 +216,26 @@
       <span class="footer-left">{{ t.ui.footerLeft }}</span>
       <span class="footer-right">{{ t.ui.footerRight }}</span>
     </footer>
-
   </main>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useLocaleStore } from '../stores/locale.js'
+import { computed } from "vue";
+import { useLocaleStore } from "../stores/locale.js";
 
-const localeStore = useLocaleStore()
-const t = computed(() => localeStore.t)
+const localeStore = useLocaleStore();
+const t = computed(() => localeStore.t);
 
 const miniFacts = computed(() => {
-  const ui = t.value.ui
+  const ui = t.value.ui;
   return [
-    { label: ui.miniBased,      value: ui.miniBasedV },
-    { label: ui.miniLanguages,  value: ui.miniLanguagesV },
-    { label: ui.miniCurrently,  value: ui.miniCurrentlyV },
+    { label: ui.miniBased, value: ui.miniBasedV },
+    { label: ui.miniLanguages, value: ui.miniLanguagesV },
+    { label: ui.miniCurrently, value: ui.miniCurrentlyV },
     { label: ui.miniBackground, value: ui.miniBackgroundV },
-    { label: ui.miniEducation,  value: ui.miniEducationV },
-  ]
-})
+    { label: ui.miniEducation, value: ui.miniEducationV },
+  ];
+});
 </script>
 
 <style scoped>
@@ -232,7 +265,7 @@ const miniFacts = computed(() => {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -254,13 +287,18 @@ const miniFacts = computed(() => {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 .hero__headline {
-  font-family: 'Instrument Serif', serif;
-  font-size: clamp(48px, 6vw, 80px);
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(36px, 4vw, 56px);
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
@@ -305,7 +343,9 @@ const miniFacts = computed(() => {
   font-weight: 500;
   border-radius: 6px;
   text-decoration: none;
-  transition: border-color 150ms ease, color 150ms ease;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease;
 }
 .btn-ghost:hover {
   border-color: var(--color-accent);
@@ -343,7 +383,7 @@ const miniFacts = computed(() => {
 }
 
 .hero__eyebrow {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-style: italic;
   font-size: 22px;
   color: var(--color-text-muted);
@@ -351,7 +391,7 @@ const miniFacts = computed(() => {
 }
 
 .hero__intro-name {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-size: 22px;
   font-weight: 400;
   color: var(--color-text-primary);
@@ -373,7 +413,7 @@ const miniFacts = computed(() => {
 }
 
 .hero__social-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -419,7 +459,7 @@ const miniFacts = computed(() => {
 }
 
 .label-text {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -427,14 +467,14 @@ const miniFacts = computed(() => {
 }
 
 .label-index {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.06em;
   color: var(--color-accent);
 }
 
 .section-headline {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-size: clamp(32px, 3.5vw, 52px);
   font-weight: 400;
   line-height: 1.15;
@@ -482,7 +522,7 @@ const miniFacts = computed(() => {
 }
 
 .fact-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -517,13 +557,13 @@ const miniFacts = computed(() => {
 }
 
 .exp-index {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   color: var(--color-accent);
 }
 
 .exp-period {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   color: var(--color-text-muted);
 }
@@ -548,7 +588,7 @@ const miniFacts = computed(() => {
 }
 
 .exp-role-title {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-size: 22px;
   font-weight: 400;
   color: var(--color-text-primary);
@@ -560,7 +600,7 @@ const miniFacts = computed(() => {
 }
 
 .exp-company {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-style: italic;
   font-size: 22px;
   color: var(--color-accent);
@@ -596,7 +636,7 @@ const miniFacts = computed(() => {
   position: relative;
 }
 .exp-bullet::before {
-  content: '—';
+  content: "—";
   position: absolute;
   left: 0;
   color: var(--color-text-dimmed);
@@ -617,7 +657,7 @@ const miniFacts = computed(() => {
 }
 
 .stack-cat-name {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-style: italic;
   font-size: 20px;
   font-weight: 400;
@@ -632,7 +672,7 @@ const miniFacts = computed(() => {
 }
 
 .stack-pill {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--color-text-muted);
@@ -660,7 +700,7 @@ const miniFacts = computed(() => {
 }
 
 .soon-tag {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -668,7 +708,7 @@ const miniFacts = computed(() => {
 }
 
 .soon-title {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-size: 28px;
   font-weight: 400;
   color: var(--color-text-primary);
@@ -687,7 +727,7 @@ const miniFacts = computed(() => {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -715,7 +755,7 @@ const miniFacts = computed(() => {
 }
 
 .contact__headline {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-size: clamp(40px, 5vw, 72px);
   font-weight: 400;
   line-height: 1.1;
@@ -758,7 +798,7 @@ const miniFacts = computed(() => {
 }
 
 .contact__link-label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -767,17 +807,19 @@ const miniFacts = computed(() => {
 }
 
 .contact__link-value {
-  font-family: 'Instrument Serif', serif;
+  font-family: "Instrument Serif", serif;
   font-style: italic;
   font-size: 20px;
   flex: 1;
 }
 
 .contact__link-arrow {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   color: var(--color-text-muted);
-  transition: color 150ms ease, transform 150ms ease;
+  transition:
+    color 150ms ease,
+    transform 150ms ease;
   display: inline-block;
 }
 .contact__link:hover .contact__link-arrow {
@@ -797,7 +839,7 @@ const miniFacts = computed(() => {
 
 .footer-left,
 .footer-right {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
