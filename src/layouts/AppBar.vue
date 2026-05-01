@@ -84,12 +84,33 @@ const navItems = computed(() => [
   flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
+/* below lg — tablet */
+@media (max-width: 1023px) {
+  .site-nav {
+    padding: 0 40px;
+    gap: 20px;
+  }
+  .site-nav__links {
+    gap: 20px;
+  }
+}
+
+/* below md — hide nav links, keep logo + controls */
+@media (max-width: 767px) {
   .site-nav {
     padding: 0 24px;
+    justify-content: space-between;
   }
   .site-nav__links {
     display: none;
+  }
+}
+
+/* below sm */
+@media (max-width: 639px) {
+  .site-nav {
+    padding: 0 16px;
+    height: 56px;
   }
 }
 </style>

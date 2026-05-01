@@ -847,46 +847,54 @@ const miniFacts = computed(() => {
 }
 
 /* ── Responsive ── */
-@media (max-width: 960px) {
+
+/* below lg — 1024px */
+@media (max-width: 1023px) {
   .site-main {
-    padding: 0 32px;
+    padding: 0 40px;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 56px;
-    padding: 80px 0 96px;
+    gap: 48px;
+    padding: 72px 0 80px;
   }
 
   .hero__right {
     border-left: none;
     padding-left: 0;
     border-top: 1px solid var(--color-rule);
-    padding-top: 48px;
+    padding-top: 40px;
+  }
+
+  .section {
+    padding: 72px 0;
   }
 
   .section-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 
   .section-header {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+    margin-bottom: 40px;
   }
 
   .exp-row {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
 
   .stack-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
+    gap: 32px 40px;
   }
 
   .soon-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
   }
 
@@ -895,13 +903,71 @@ const miniFacts = computed(() => {
   }
 }
 
-@media (max-width: 600px) {
+/* below md — 768px */
+@media (max-width: 767px) {
   .site-main {
-    padding: 0 20px;
+    padding: 0 24px;
+  }
+
+  .hero {
+    padding: 56px 0 64px;
+    gap: 40px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .soon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__link-value {
+    font-size: 16px;
+    word-break: break-all;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    margin-top: 48px;
+  }
+}
+
+/* below sm — 640px */
+@media (max-width: 639px) {
+  .site-main {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 40px 0 56px;
+  }
+
+  .hero__headline {
+    font-size: clamp(32px, 8vw, 44px);
+  }
+
+  .section {
+    padding: 48px 0;
   }
 
   .stack-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    justify-content: center;
   }
 }
 </style>
