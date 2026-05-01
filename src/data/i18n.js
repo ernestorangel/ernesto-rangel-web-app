@@ -33,7 +33,7 @@ export const I18N = {
       heroAndFast: "and",
       heroAdj3: "fast.",
       subhead:
-        "Full-stack engineer based in São Paulo. Six years across healthcare, energy, and retail — building front-ends in Vue and Electron, back-ends in Node.",
+        "Full-stack engineer based in São Paulo. Four years across healthcare, energy, and retail — building front-ends in Vue and Electron, back-ends in Node.",
       ctaContact: "Get in touch",
       ctaWork: "See work history →",
       heroIntroEyebrow: "Hello,",
@@ -197,7 +197,7 @@ export const I18N = {
       heroAndFast: "e",
       heroAdj3: "rápido.",
       subhead:
-        "Engenheiro full-stack em São Paulo. Seis anos entre saúde, energia e varejo — front-ends em Vue e Electron, back-ends em Node.",
+        "Engenheiro full-stack em São Paulo. Quatro anos entre saúde, energia e varejo — front-ends em Vue e Electron, back-ends em Node.",
       ctaContact: "Entrar em contato",
       ctaWork: "Ver experiência →",
       heroIntroEyebrow: "Olá,",
