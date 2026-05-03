@@ -14,8 +14,8 @@ export const I18N = {
     ...BASE,
     locale: "en",
     tagline: "Software Engineer",
-    location: "São Paulo, Brazil",
-    locationShort: "São Paulo, BR",
+    location: "Sao Paulo, Brazil",
+    locationShort: "Sao Paulo, BR",
     role: "Full-stack engineer",
 
     nav: {
@@ -26,14 +26,14 @@ export const I18N = {
       contact: "Contact",
     },
     ui: {
-      available: "Available for select work — 2026",
+      available: "Available for work — 2026",
       heroLead: "I build software that's",
       heroAdj1: "thoughtful,",
       heroAdj2: "durable,",
       heroAndFast: "and",
       heroAdj3: "fast.",
       subhead:
-        "Full-stack engineer based in São Paulo. Four years across healthcare, energy, and retail — building front-ends in Vue and Electron, back-ends in Node.",
+        "Full-stack SWE based in São Paulo. Four years across healthcare, energy, and retail — building front-ends in Vue and back-ends in Node.",
       ctaContact: "Get in touch",
       ctaWork: "See work history →",
       heroIntroEyebrow: "Hello,",
@@ -59,7 +59,7 @@ export const I18N = {
         strong: "build?",
       },
       contactBlurb:
-        "I'm open to interesting full-stack work — particularly Vue, Electron, and Node-based systems. Email is the best way.",
+        "I'm open to full-stack work — particularly Vue and Node-based systems. Email is the best way.",
       miniBased: "Based in",
       miniLanguages: "Languages",
       miniCurrently: "Currently",
@@ -81,16 +81,15 @@ export const I18N = {
     },
 
     bio: [
-      "I'm a full-stack engineer based in São Paulo. I came to software the long way around — through a mechanical engineering degree at UNESP — and the analytical habits that came with it still shape how I approach building things.",
-      "Today I work mostly in the JavaScript ecosystem, building front-ends with Vue and Electron and back-ends with Node. I've shipped software in three regulated, sometimes unforgiving sectors: healthcare, energy, and retail point-of-sale.",
-      "Outside of client work I'm building toward a small body of independent work — a SaaS, a few desktop tools, and writing about the craft of building them.",
+      "I'm a full-stack SWE based in São Paulo, Brazil. I came to software the long way around — through a mechanical engineering degree at UNESP — and the analytical habits that came with it still shape how I approach everything.",
+      "Today I work mostly in the JavaScript ecosystem, building front-ends with Vue and back-ends with Node. I've shipped software in three regulated, sometimes unforgiving sectors: healthcare, energy, and retail point-of-sale.",
     ],
 
     experience: [
       {
         role: "Front-end Developer",
-        company: "ConnectPlug",
-        sector: "Retail · Point-of-sale",
+        company: "CPlug (LWSA Group)",
+        sector: "Point-of-sale · Food service · Retail",
         period: "Aug 2025 — Present",
         summary:
           "Building a desktop POS for restaurants and retail with Vue and Electron.",
@@ -180,7 +179,7 @@ export const I18N = {
     tagline: "Engenheiro de Software",
     location: "São Paulo, Brasil",
     locationShort: "São Paulo, BR",
-    role: "Engenheiro full-stack",
+    role: "Engenheiro de Software Full-stack",
 
     nav: {
       about: "Sobre",
@@ -191,13 +190,13 @@ export const I18N = {
     },
     ui: {
       available: "Disponível para projetos — 2026",
-      heroLead: "Construo software",
+      heroLead: "Construo software que é",
       heroAdj1: "bem pensado,",
       heroAdj2: "durável,",
       heroAndFast: "e",
       heroAdj3: "rápido.",
       subhead:
-        "Engenheiro full-stack em São Paulo. Quatro anos entre saúde, energia e varejo — front-ends em Vue e Electron, back-ends em Node.",
+        "Engenheiro de software full-stack, atualmente morando em São Paulo. Com quatro anos de experiência entre os setores de saúde, energia e varejo — construindo front-ends em Vue e back-ends em Node.",
       ctaContact: "Entrar em contato",
       ctaWork: "Ver experiência →",
       heroIntroEyebrow: "Olá,",
@@ -223,7 +222,7 @@ export const I18N = {
         strong: "construir?",
       },
       contactBlurb:
-        "Estou aberto a trabalhos full-stack interessantes — especialmente em Vue, Electron e sistemas com Node. E-mail é o melhor caminho.",
+        "Estou aberto a trabalhos full-stack interessantes — especialmente em Vue e Node. E-mail é a melhor maneira de entrar em contato.",
       miniBased: "Localização",
       miniLanguages: "Idiomas",
       miniCurrently: "Atualmente",
@@ -245,16 +244,15 @@ export const I18N = {
     },
 
     bio: [
-      "Sou engenheiro full-stack em São Paulo. Cheguei ao software pelo caminho mais longo — uma graduação em Engenharia Mecânica pela UNESP — e os hábitos analíticos que vieram com ela continuam moldando como abordo a construção das coisas.",
-      "Hoje trabalho principalmente no ecossistema JavaScript, construindo front-ends com Vue e Electron e back-ends com Node. Já entreguei software em três setores regulados e às vezes implacáveis: saúde, energia e PDV (varejo).",
-      "Fora do trabalho com clientes, venho construindo aos poucos um corpo independente de obra — um SaaS, algumas ferramentas desktop e textos sobre o ofício de construí-los.",
+      "Cheguei ao software por um caminho diferente — uma graduação em Engenharia Mecânica pela UNESP — e os hábitos analíticos que vieram com ela continuam moldando como abordo a resolução de problemas.",
+      "Hoje trabalho principalmente no ecossistema JavaScript, construindo front-ends com Vue e back-ends com Node. Já entreguei software em três setores regulados e às vezes implacáveis: saúde, energia e PDV (varejo).",
     ],
 
     experience: [
       {
         role: "Desenvolvedor Front-end",
-        company: "ConnectPlug",
-        sector: "Varejo · Ponto de Venda",
+        company: "CPlug (Grupo LWSA)",
+        sector: "Ponto de Venda · Food · Varejo",
         period: "Ago 2025 — Atual",
         summary:
           "Desenvolvimento de um PDV desktop para restaurantes e varejo com Vue e Electron.",
