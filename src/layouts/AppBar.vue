@@ -26,8 +26,7 @@ const navItems = computed(() => [
   { id: 'about',   label: nav.value.about },
   { id: 'work',    label: nav.value.work },
   { id: 'stack',   label: nav.value.stack },
-  { id: 'soon',    label: nav.value.soon },
-  { id: 'contact', label: nav.value.contact },
+{ id: 'contact', label: nav.value.contact },
 ])
 </script>
 

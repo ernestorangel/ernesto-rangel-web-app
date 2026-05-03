@@ -190,9 +190,9 @@ export const I18N = {
       contact: "Contato",
     },
     ui: {
-      available: "Disponível para projetos selecionados — 2026",
+      available: "Disponível para projetos — 2026",
       heroLead: "Construo software",
-      heroAdj1: "cuidadoso,",
+      heroAdj1: "bem pensado,",
       heroAdj2: "durável,",
       heroAndFast: "e",
       heroAdj3: "rápido.",

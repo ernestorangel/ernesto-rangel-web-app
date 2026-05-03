@@ -140,38 +140,12 @@
       </div>
     </section>
 
-    <!-- ── Coming Soon ── -->
-    <section id="soon" class="section">
-      <div class="section-header">
-        <div class="section-label">
-          <span class="label-text">{{ t.ui.sectionSoon }}</span>
-          <span class="label-index">0 4</span>
-        </div>
-        <h2 class="section-headline">
-          {{ t.ui.sectionSoonHeadline.pre }}
-          <strong>{{ t.ui.sectionSoonHeadline.strong }}</strong>
-          {{ t.ui.sectionSoonHeadline.post }}
-        </h2>
-      </div>
-      <div class="soon-grid">
-        <div v-for="item in t.comingSoon" :key="item.key" class="soon-card">
-          <span class="soon-tag">{{ item.tag }}</span>
-          <h3 class="soon-title">{{ item.title }}</h3>
-          <p class="soon-blurb">{{ item.blurb }}</p>
-          <div class="soon-status">
-            <span class="soon-dot" />
-            {{ t.ui.inProgress }}
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ── Contact ── -->
     <section id="contact" class="section section--contact">
       <div class="section-grid">
         <div class="section-label">
           <span class="label-text">{{ t.ui.sectionContact }}</span>
-          <span class="label-index">0 5</span>
+          <span class="label-index">0 4</span>
         </div>
         <div class="contact__body">
           <h2 class="contact__headline">
@@ -681,67 +655,6 @@ const miniFacts = computed(() => {
   padding: 4px 10px;
 }
 
-/* ── Coming Soon ── */
-.soon-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-left: 264px;
-}
-
-.soon-card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 32px;
-  border: 1px solid var(--color-rule);
-  border-radius: 8px;
-  background: var(--color-surface);
-}
-
-.soon-tag {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-}
-
-.soon-title {
-  font-family: "Instrument Serif", serif;
-  font-size: 28px;
-  font-weight: 400;
-  color: var(--color-text-primary);
-  margin: 0;
-}
-
-.soon-blurb {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--color-text-muted);
-  margin: 0;
-  flex: 1;
-}
-
-.soon-status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-text-dimmed);
-}
-
-.soon-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-text-dimmed);
-  flex-shrink: 0;
-}
-
 /* ── Contact ── */
 .section--contact {
   padding-bottom: 0;
@@ -893,11 +806,6 @@ const miniFacts = computed(() => {
     gap: 32px 40px;
   }
 
-  .soon-grid {
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 0;
-  }
-
   .contact__body {
     grid-column: 1;
   }
@@ -922,9 +830,6 @@ const miniFacts = computed(() => {
     margin-bottom: 32px;
   }
 
-  .soon-grid {
-    grid-template-columns: 1fr;
-  }
 
   .contact__link-value {
     font-size: 16px;

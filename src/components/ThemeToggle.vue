@@ -1,44 +1,47 @@
 <template>
   <button
+    class="theme-ctrl"
     @click="themeStore.toggle()"
     :aria-label="themeStore.isDark ? 'Switch to light mode' : 'Switch to dark mode'"
-    class="theme-pill"
   >
-    <span class="theme-pill__dot" :class="{ 'theme-pill__dot--dark': themeStore.isDark }" />
+    <span class="theme-ctrl__icon">
+      <Icon :icon="themeStore.isDark ? 'moon' : 'sun'" size="xs" />
+    </span>
   </button>
 </template>
 
 <script setup>
 import { useThemeStore } from '../stores/theme.js'
+import Icon from './Icon.vue'
 const themeStore = useThemeStore()
 </script>
 
 <style scoped>
-.theme-pill {
-  display: flex;
+.theme-ctrl {
+  display: inline-flex;
   align-items: center;
-  width: 44px;
-  height: 24px;
-  border-radius: 12px;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
   border: 1px solid var(--color-rule);
+  border-radius: 6px;
   background: transparent;
   cursor: pointer;
-  padding: 3px;
+  padding: 0;
   flex-shrink: 0;
-  transition: border-color 200ms ease;
+  transition: border-color 180ms ease;
 }
-.theme-pill:hover {
+.theme-ctrl:hover {
   border-color: var(--color-accent);
 }
-.theme-pill__dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--color-text-primary);
-  transform: translateX(0);
-  transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1), background 200ms ease;
+.theme-ctrl__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: color 180ms ease;
 }
-.theme-pill__dot--dark {
-  transform: translateX(18px);
+.theme-ctrl:hover .theme-ctrl__icon {
+  color: var(--color-text-primary);
 }
 </style>
