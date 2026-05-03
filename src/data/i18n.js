@@ -22,6 +22,7 @@ export const I18N = {
       about: "About",
       work: "Work",
       stack: "Stack",
+      blog: "Writing",
       soon: "Coming soon",
       contact: "Contact",
     },
@@ -78,6 +79,13 @@ export const I18N = {
       inProgress: "In progress",
       comingSoonTag: "Coming soon",
       jobAtConnector: "at",
+      blogPageTitle: "Writing",
+      blogPageSubtitle: "Notes on building software in JavaScript — patterns, mistakes, and small tools.",
+      blogLoading: "Loading posts…",
+      blogError: "Could not load posts. Try again later.",
+      blogEmpty: "No posts yet. Check back soon.",
+      blogFilterAll: "All",
+      blogReadingMin: "min read",
     },
 
     bio: [
@@ -185,6 +193,7 @@ export const I18N = {
       about: "Sobre",
       work: "Experiência",
       stack: "Stack",
+      blog: "Artigos",
       soon: "Em breve",
       contact: "Contato",
     },
@@ -241,6 +250,13 @@ export const I18N = {
       inProgress: "Em desenvolvimento",
       comingSoonTag: "Em breve",
       jobAtConnector: "na",
+      blogPageTitle: "Artigos",
+      blogPageSubtitle: "Anotações sobre construir software em JavaScript — padrões, erros e pequenas ferramentas.",
+      blogLoading: "Carregando posts…",
+      blogError: "Não foi possível carregar os posts. Tente novamente mais tarde.",
+      blogEmpty: "Nenhum post ainda. Volte em breve.",
+      blogFilterAll: "Todos",
+      blogReadingMin: "min de leitura",
     },
 
     bio: [

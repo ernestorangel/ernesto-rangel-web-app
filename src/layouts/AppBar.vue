@@ -2,9 +2,14 @@
   <header class="site-nav">
     <a href="#hero" class="site-nav__logo">Ernesto Rangel</a>
     <nav class="site-nav__links">
-      <a v-for="item in navItems" :key="item.id" :href="`#${item.id}`" class="site-nav__link">
-        {{ item.label }}
-      </a>
+      <template v-for="item in navItems" :key="item.id">
+        <RouterLink v-if="item.route" :to="item.route" class="site-nav__link">
+          {{ item.label }}
+        </RouterLink>
+        <a v-else :href="`#${item.id}`" class="site-nav__link">
+          {{ item.label }}
+        </a>
+      </template>
     </nav>
     <div class="site-nav__controls">
       <ThemeToggle />
@@ -26,7 +31,8 @@ const navItems = computed(() => [
   { id: 'about',   label: nav.value.about },
   { id: 'work',    label: nav.value.work },
   { id: 'stack',   label: nav.value.stack },
-{ id: 'contact', label: nav.value.contact },
+  { id: 'blog',    label: nav.value.blog, route: '/blog' },
+  { id: 'contact', label: nav.value.contact },
 ])
 </script>
 

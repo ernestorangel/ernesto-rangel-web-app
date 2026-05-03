@@ -7,6 +7,12 @@ import Contact from "./views/Contact.vue";
 async function setupRouter() {
   const routes = [
     { path: "/", name: "home", component: Home, meta: { title: "Início" } },
+    {
+      path: "/blog",
+      name: "blog",
+      component: () => import("./views/Blog.vue"),
+      meta: { title: "Writing" },
+    },
     // {
     //   path: "/curriculum",
     //   name: "curriculum",
