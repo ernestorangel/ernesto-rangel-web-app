@@ -58,11 +58,19 @@
 
     <!-- ── About ── -->
     <section id="about" class="section">
-      <div class="section-grid">
+      <div class="section-header">
         <div class="section-label">
           <span class="label-text">{{ t.ui.sectionAbout }}</span>
           <span class="label-index">0 1</span>
         </div>
+        <h2 class="section-headline">
+          {{ t.ui.sectionAboutHeadline.pre }}
+          <strong>{{ t.ui.sectionAboutHeadline.strong }}</strong
+          >{{ t.ui.sectionAboutHeadline.post }}
+        </h2>
+      </div>
+      <div class="section-grid">
+        <div />
         <div class="about__bio">
           <p v-for="(para, i) in t.bio" :key="i" class="about__para">
             {{ para }}
@@ -129,6 +137,11 @@
           <span class="label-text">{{ t.ui.sectionStack }}</span>
           <span class="label-index">0 3</span>
         </div>
+        <h2 class="section-headline">
+          {{ t.ui.sectionStackHeadline.pre }}
+          <strong>{{ t.ui.sectionStackHeadline.strong }}</strong
+          >{{ t.ui.sectionStackHeadline.post }}
+        </h2>
       </div>
       <div class="stack-grid">
         <div v-for="(items, cat) in t.skills" :key="cat" class="stack-cat">
@@ -140,12 +153,42 @@
       </div>
     </section>
 
+    <!-- ── Building ── -->
+    <section id="soon" class="section">
+      <div class="section-header">
+        <div class="section-label">
+          <span class="label-text">{{ t.ui.sectionSoon }}</span>
+          <span class="label-index">0 4</span>
+        </div>
+        <h2 class="section-headline">
+          {{ t.ui.sectionSoonHeadline.pre }}
+          <strong>{{ t.ui.sectionSoonHeadline.strong }}</strong>
+          {{ t.ui.sectionSoonHeadline.post }}
+        </h2>
+      </div>
+      <div class="soon-grid">
+        <a
+          v-for="item in t.comingSoon"
+          :key="item.key"
+          :href="item.url"
+          target="_blank"
+          rel="noopener"
+          class="soon-card"
+        >
+          <span class="soon-tag">{{ item.tag }}</span>
+          <h3 class="soon-title">{{ item.title }}</h3>
+          <p class="soon-blurb">{{ item.blurb }}</p>
+          <span class="soon-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
     <!-- ── Contact ── -->
     <section id="contact" class="section section--contact">
       <div class="section-grid">
         <div class="section-label">
           <span class="label-text">{{ t.ui.sectionContact }}</span>
-          <span class="label-index">0 4</span>
+          <span class="label-index">0 5</span>
         </div>
         <div class="contact__body">
           <h2 class="contact__headline">
@@ -407,7 +450,7 @@ const miniFacts = computed(() => {
 /* ── Section shared ── */
 .section {
   padding: 96px 0;
-  border-top: 1px solid var(--color-rule);
+  border-top: 1px solid var(--color-text-dimmed);
 }
 
 .section-grid {
@@ -489,7 +532,7 @@ const miniFacts = computed(() => {
   flex-direction: column;
   gap: 3px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-border);
 }
 .fact-row:last-child {
   border-bottom: none;
@@ -520,7 +563,7 @@ const miniFacts = computed(() => {
   grid-template-columns: 200px 1fr 1fr;
   gap: 0 64px;
   padding: 40px 0;
-  border-bottom: 1px solid var(--color-rule);
+  border-top: 1px solid var(--color-border);
   align-items: start;
 }
 
@@ -655,6 +698,63 @@ const miniFacts = computed(() => {
   padding: 4px 10px;
 }
 
+/* ── Building ── */
+.soon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-left: 264px;
+}
+
+.soon-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+  background: var(--color-surface);
+  text-decoration: none;
+  transition: border-color 150ms ease;
+}
+.soon-card:hover {
+  border-color: var(--color-accent);
+}
+
+.soon-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.soon-title {
+  font-family: "Instrument Serif", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.soon-blurb {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
+  flex: 1;
+}
+
+.soon-arrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  color: var(--color-text-dimmed);
+  transition: color 150ms ease;
+}
+.soon-card:hover .soon-arrow {
+  color: var(--color-accent);
+}
+
 /* ── Contact ── */
 .section--contact {
   padding-bottom: 0;
@@ -693,7 +793,7 @@ const miniFacts = computed(() => {
 .contact__links {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--color-rule);
+  border-top: 1px solid var(--color-border);
 }
 
 .contact__link {
@@ -701,7 +801,7 @@ const miniFacts = computed(() => {
   align-items: center;
   gap: 24px;
   padding: 20px 0;
-  border-bottom: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-border);
   text-decoration: none;
   transition: color 150ms ease;
   color: var(--color-text-primary);
@@ -747,7 +847,7 @@ const miniFacts = computed(() => {
   align-items: center;
   padding: 32px 0;
   margin-top: 80px;
-  border-top: 1px solid var(--color-rule);
+  border-top: 1px solid var(--color-text-dimmed);
 }
 
 .footer-left,
@@ -806,6 +906,11 @@ const miniFacts = computed(() => {
     gap: 32px 40px;
   }
 
+  .soon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+  }
+
   .contact__body {
     grid-column: 1;
   }
@@ -830,6 +935,9 @@ const miniFacts = computed(() => {
     margin-bottom: 32px;
   }
 
+  .soon-grid {
+    grid-template-columns: 1fr;
+  }
 
   .contact__link-value {
     font-size: 16px;
