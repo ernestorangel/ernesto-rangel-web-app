@@ -3,6 +3,7 @@ import Home from "./views/Home.vue";
 import NotFound from "./views/NotFound.vue";
 import Curriculum from "./views/Curriculum.vue";
 import Contact from "./views/Contact.vue";
+import BugReport from "./views/BugReport.vue";
 
 async function setupRouter() {
   const routes = [
@@ -19,6 +20,7 @@ async function setupRouter() {
     //   component: Contact,
     //   meta: { title: "Contato" },
     // },
+    { path: "/bug-report", name: "bug-report", component: BugReport, meta: { title: "Bug Report" } },
     { path: "/:pathMatch(.*)*", component: NotFound },
   ];
 

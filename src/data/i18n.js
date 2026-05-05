@@ -90,6 +90,11 @@ export const I18N = {
       jobAtConnector: "at",
     },
 
+    bugReport: {
+      headline: "Found an issue in one of my apps?",
+      cta: "Get in touch",
+    },
+
     bio: [
       "I'm a full-stack SWE based in São Paulo, Brazil. I came to software the long way around — through a mechanical engineering degree at UNESP — and the analytical habits that came with it still shape how I approach everything.",
       "Today I work mostly in the JavaScript ecosystem, building front-ends with Vue and back-ends with Node. I've shipped software in three regulated, sometimes unforgiving sectors: healthcare, energy, and retail point-of-sale.",
@@ -256,6 +261,11 @@ export const I18N = {
       inProgress: "Em desenvolvimento",
       comingSoonTag: "Em breve",
       jobAtConnector: "na",
+    },
+
+    bugReport: {
+      headline: "Encontrou algum problema em uma de minhas aplicações?",
+      cta: "Entre em contato",
     },
 
     bio: [

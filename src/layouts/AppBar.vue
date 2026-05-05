@@ -1,7 +1,7 @@
 <template>
   <header class="site-nav">
     <a href="#hero" class="site-nav__logo">Ernesto Rangel</a>
-    <nav class="site-nav__links">
+    <nav v-if="isHome" class="site-nav__links">
       <a v-for="item in navItems" :key="item.id" :href="`#${item.id}`" class="site-nav__link">
         {{ item.label }}
       </a>
@@ -15,9 +15,13 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { useLocaleStore } from '../stores/locale.js'
 import ThemeToggle from '../components/ThemeToggle.vue'
 import LangSelect from '../components/LangSelect.vue'
+
+const route = useRoute()
+const isHome = computed(() => route.name === 'home')
 
 const localeStore = useLocaleStore()
 const nav = computed(() => localeStore.t.nav)
@@ -38,6 +42,7 @@ const navItems = computed(() => [
   z-index: 50;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 32px;
   padding: 0 64px;
   height: 64px;
