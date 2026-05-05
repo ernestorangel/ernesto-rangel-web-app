@@ -39,6 +39,11 @@ export const I18N = {
       heroIntroEyebrow: "Hello,",
       heroIntroLine: "I'm Ernesto.",
       sectionAbout: "About",
+      sectionAboutHeadline: {
+        pre: "I came to software",
+        strong: "the long way",
+        post: " around.",
+      },
       sectionExp: "Experience",
       sectionExpHeadline: {
         pre: "A few years building across",
@@ -46,6 +51,11 @@ export const I18N = {
         post: ".",
       },
       sectionStack: "Stack",
+      sectionStackHeadline: {
+        pre: "The tools I reach for",
+        strong: "when it matters",
+        post: ".",
+      },
       sectionSoon: "On the way",
       sectionSoonHeadline: {
         pre: "A few things",
@@ -155,20 +165,15 @@ export const I18N = {
         tag: "Blog",
         blurb:
           "Notes on building software in JavaScript — patterns, mistakes, and small tools.",
+        url: "https://dev.to/ernestorangel",
       },
       {
-        key: "courses",
-        title: "Courses",
-        tag: "Courses",
+        key: "saas",
+        title: "Bending Beam Calculator",
+        tag: "SaaS",
         blurb:
-          "Long-form courses on Vue, Electron, and shipping desktop apps that hold up in production.",
-      },
-      {
-        key: "downloads",
-        title: "Downloads",
-        tag: "Software",
-        blurb:
-          "A small collection of desktop tools and a SaaS in progress. Built quietly, released slowly.",
+          "An educational SaaS for structural analysis — born from my undergraduate thesis in Mechanical Engineering.",
+        url: "https://bending-beam-calculator.web.app/",
       },
     ],
   },
@@ -202,6 +207,11 @@ export const I18N = {
       heroIntroEyebrow: "Olá,",
       heroIntroLine: "sou o Ernesto.",
       sectionAbout: "Sobre",
+      sectionAboutHeadline: {
+        pre: "Cheguei ao software",
+        strong: "pelo caminho longo",
+        post: ".",
+      },
       sectionExp: "Experiência",
       sectionExpHeadline: {
         pre: "Alguns anos construindo em",
@@ -209,6 +219,11 @@ export const I18N = {
         post: ".",
       },
       sectionStack: "Stack",
+      sectionStackHeadline: {
+        pre: "As ferramentas que uso quando",
+        strong: "importa de verdade",
+        post: ".",
+      },
       sectionSoon: "A caminho",
       sectionSoonHeadline: {
         pre: "Algumas coisas",
@@ -319,20 +334,15 @@ export const I18N = {
         tag: "Blog",
         blurb:
           "Anotações sobre construir software em JavaScript — padrões, erros e pequenas ferramentas.",
+        url: "https://dev.to/ernestorangel",
       },
       {
-        key: "courses",
-        title: "Cursos",
-        tag: "Cursos",
+        key: "saas",
+        title: "Calculadora de Viga em Flexão",
+        tag: "SaaS",
         blurb:
-          "Cursos aprofundados sobre Vue, Electron e como entregar apps desktop que se sustentam em produção.",
-      },
-      {
-        key: "downloads",
-        title: "Downloads",
-        tag: "Software",
-        blurb:
-          "Uma pequena coleção de ferramentas desktop e um SaaS em desenvolvimento. Construído com calma, lançado aos poucos.",
+          "Um SaaS educacional para análise estrutural — nascido do meu TCC em Engenharia Mecânica.",
+        url: "https://bending-beam-calculator.web.app/",
       },
     ],
   },
