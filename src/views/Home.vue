@@ -153,32 +153,36 @@
       </div>
     </section>
 
-    <!-- ── Building ── -->
-    <section id="soon" class="section">
+    <!-- ── Projects ── -->
+    <section id="projects" class="section">
       <div class="section-header">
         <div class="section-label">
-          <span class="label-text">{{ t.ui.sectionSoon }}</span>
+          <span class="label-text">{{ t.ui.sectionProjects }}</span>
           <span class="label-index">0 4</span>
         </div>
         <h2 class="section-headline">
-          {{ t.ui.sectionSoonHeadline.pre }}
-          <strong>{{ t.ui.sectionSoonHeadline.strong }}</strong>
-          {{ t.ui.sectionSoonHeadline.post }}
+          {{ t.ui.sectionProjectsHeadline.pre }}
+          <strong>{{ t.ui.sectionProjectsHeadline.strong }}</strong>
+          {{ t.ui.sectionProjectsHeadline.post }}
         </h2>
       </div>
-      <div class="soon-grid">
+      <div class="projects-grid">
         <a
-          v-for="item in t.comingSoon"
+          v-for="item in t.projects"
           :key="item.key"
           :href="item.url"
           target="_blank"
           rel="noopener"
-          class="soon-card"
+          class="project-card"
+          :class="{ 'project-card--soon': item.soon }"
         >
-          <span class="soon-tag">{{ item.tag }}</span>
-          <h3 class="soon-title">{{ item.title }}</h3>
-          <p class="soon-blurb">{{ item.blurb }}</p>
-          <span class="soon-arrow">↗</span>
+          <div class="project-card__head">
+            <span class="project-tag">{{ item.tag }}</span>
+            <span v-if="item.soon" class="project-badge">{{ t.ui.soonBadge }}</span>
+          </div>
+          <h3 class="project-title">{{ item.title }}</h3>
+          <p class="project-blurb">{{ item.blurb }}</p>
+          <span class="project-arrow">↗</span>
         </a>
       </div>
     </section>
@@ -698,15 +702,15 @@ const miniFacts = computed(() => {
   padding: 4px 10px;
 }
 
-/* ── Building ── */
-.soon-grid {
+/* ── Projects ── */
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-left: 264px;
 }
 
-.soon-card {
+.project-card {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -717,11 +721,18 @@ const miniFacts = computed(() => {
   text-decoration: none;
   transition: border-color 150ms ease;
 }
-.soon-card:hover {
+.project-card:hover {
   border-color: var(--color-accent);
 }
 
-.soon-tag {
+.project-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.project-tag {
   font-family: "JetBrains Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.1em;
@@ -729,7 +740,20 @@ const miniFacts = computed(() => {
   color: var(--color-accent);
 }
 
-.soon-title {
+.project-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent);
+  border-radius: 100px;
+  padding: 3px 8px;
+  line-height: 1;
+}
+
+.project-title {
   font-family: "Instrument Serif", serif;
   font-size: 28px;
   font-weight: 400;
@@ -737,7 +761,7 @@ const miniFacts = computed(() => {
   margin: 0;
 }
 
-.soon-blurb {
+.project-blurb {
   font-size: 14px;
   line-height: 1.65;
   color: var(--color-text-muted);
@@ -745,13 +769,13 @@ const miniFacts = computed(() => {
   flex: 1;
 }
 
-.soon-arrow {
+.project-arrow {
   font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   color: var(--color-text-dimmed);
   transition: color 150ms ease;
 }
-.soon-card:hover .soon-arrow {
+.project-card:hover .project-arrow {
   color: var(--color-accent);
 }
 
@@ -906,7 +930,7 @@ const miniFacts = computed(() => {
     gap: 32px 40px;
   }
 
-  .soon-grid {
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
   }
@@ -935,7 +959,7 @@ const miniFacts = computed(() => {
     margin-bottom: 32px;
   }
 
-  .soon-grid {
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 

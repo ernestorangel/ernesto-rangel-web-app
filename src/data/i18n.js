@@ -22,7 +22,7 @@ export const I18N = {
       about: "About",
       work: "Work",
       stack: "Stack",
-      soon: "Coming soon",
+      projects: "Projects",
       contact: "Contact",
     },
     ui: {
@@ -56,12 +56,13 @@ export const I18N = {
         strong: "when it matters",
         post: ".",
       },
-      sectionSoon: "On the way",
-      sectionSoonHeadline: {
+      sectionProjects: "Projects",
+      sectionProjectsHeadline: {
         pre: "A few things",
-        strong: "I'm building",
-        post: "next.",
+        strong: "I've built",
+        post: " — and a couple still cooking.",
       },
+      soonBadge: "Soon",
       sectionContact: "Contact",
       contactHeadline: {
         pre: "Got something solid",
@@ -86,7 +87,6 @@ export const I18N = {
       footerLeft: "© 2026 — Ernesto Rangel",
       footerRight: "ernestorangel.dev",
       inProgress: "In progress",
-      comingSoonTag: "Coming soon",
       jobAtConnector: "at",
     },
 
@@ -163,7 +163,16 @@ export const I18N = {
       Tooling: ["Git", "Docker", "Scrum / Kanban"],
     },
 
-    comingSoon: [
+    projects: [
+      {
+        key: "tft-companion",
+        title: "TFT Companion",
+        tag: "Web app",
+        blurb:
+          "A reference tool for Teamfight Tactics — browse champions, items, traits, and augments from the current set, plus a stat calculator that scales champions by star level.",
+        url: "https://tft-companion-b9b2c.web.app/",
+        soon: true,
+      },
       {
         key: "blog",
         title: "Writing",
@@ -171,6 +180,7 @@ export const I18N = {
         blurb:
           "Notes on building software in JavaScript — patterns, mistakes, and small tools.",
         url: "https://dev.to/ernestorangel",
+        soon: true,
       },
       {
         key: "saas",
@@ -179,6 +189,7 @@ export const I18N = {
         blurb:
           "An educational SaaS for structural analysis — born from my undergraduate thesis in Mechanical Engineering.",
         url: "https://bending-beam-calculator.web.app/",
+        soon: true,
       },
     ],
   },
@@ -195,7 +206,7 @@ export const I18N = {
       about: "Sobre",
       work: "Experiência",
       stack: "Stack",
-      soon: "Em breve",
+      projects: "Projetos",
       contact: "Contato",
     },
     ui: {
@@ -229,12 +240,13 @@ export const I18N = {
         strong: "importa de verdade",
         post: ".",
       },
-      sectionSoon: "A caminho",
-      sectionSoonHeadline: {
-        pre: "Algumas coisas",
-        strong: "que estou construindo",
-        post: "a seguir.",
+      sectionProjects: "Projetos",
+      sectionProjectsHeadline: {
+        pre: "Algumas coisas que",
+        strong: "construí",
+        post: " — e outras ainda no forno.",
       },
+      soonBadge: "Em breve",
       sectionContact: "Contato",
       contactHeadline: {
         pre: "Tem algo de verdade",
@@ -259,7 +271,6 @@ export const I18N = {
       footerLeft: "© 2026 — Ernesto Rangel",
       footerRight: "ernestorangel.dev",
       inProgress: "Em desenvolvimento",
-      comingSoonTag: "Em breve",
       jobAtConnector: "na",
     },
 
@@ -337,7 +348,16 @@ export const I18N = {
       Ferramentas: ["Git", "Docker", "Scrum / Kanban"],
     },
 
-    comingSoon: [
+    projects: [
+      {
+        key: "tft-companion",
+        title: "TFT Companion",
+        tag: "Aplicação web",
+        blurb:
+          "Uma ferramenta de referência para Teamfight Tactics — navegue por campeões, itens, sinergias e augments do set atual, com uma calculadora que escala os atributos por nível de estrela.",
+        url: "https://tft-companion-b9b2c.web.app/",
+        soon: true,
+      },
       {
         key: "blog",
         title: "Escrita",
@@ -345,6 +365,7 @@ export const I18N = {
         blurb:
           "Anotações sobre construir software em JavaScript — padrões, erros e pequenas ferramentas.",
         url: "https://dev.to/ernestorangel",
+        soon: true,
       },
       {
         key: "saas",
@@ -353,6 +374,7 @@ export const I18N = {
         blurb:
           "Um SaaS educacional para análise estrutural — nascido do meu TCC em Engenharia Mecânica.",
         url: "https://bending-beam-calculator.web.app/",
+        soon: true,
       },
     ],
   },
