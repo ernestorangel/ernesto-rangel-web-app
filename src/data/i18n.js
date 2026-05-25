@@ -22,7 +22,7 @@ export const I18N = {
       about: "About",
       work: "Work",
       stack: "Stack",
-      projects: "Projects",
+      projects: "Portfolio",
       contact: "Contact",
     },
     ui: {
@@ -56,7 +56,7 @@ export const I18N = {
         strong: "when it matters",
         post: ".",
       },
-      sectionProjects: "Projects",
+      sectionProjects: "Portfolio",
       sectionProjectsHeadline: {
         pre: "A few things",
         strong: "I've built",
@@ -165,6 +165,14 @@ export const I18N = {
 
     projects: [
       {
+        key: "ct-construcao",
+        title: "CT da Construção",
+        tag: "Client site",
+        blurb:
+          "Institutional site for a construction-materials retailer. I designed and built the site and maintain its hosting and deployment pipeline.",
+        url: "https://ctdaconstrucao.com/",
+      },
+      {
         key: "tft-companion",
         title: "TFT Companion",
         tag: "Web app",
@@ -206,7 +214,7 @@ export const I18N = {
       about: "Sobre",
       work: "Experiência",
       stack: "Stack",
-      projects: "Projetos",
+      projects: "Portfólio",
       contact: "Contato",
     },
     ui: {
@@ -240,7 +248,7 @@ export const I18N = {
         strong: "importa de verdade",
         post: ".",
       },
-      sectionProjects: "Projetos",
+      sectionProjects: "Portfólio",
       sectionProjectsHeadline: {
         pre: "Algumas coisas que",
         strong: "construí",
@@ -349,6 +357,14 @@ export const I18N = {
     },
 
     projects: [
+      {
+        key: "ct-construcao",
+        title: "CT da Construção",
+        tag: "Site institucional",
+        blurb:
+          "Site institucional para uma loja de material de construção. Fui contratado para construir o site e mantenho a hospedagem e o pipeline de deploy.",
+        url: "https://ctdaconstrucao.com/",
+      },
       {
         key: "tft-companion",
         title: "TFT Companion",
