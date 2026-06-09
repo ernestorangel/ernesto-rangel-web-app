@@ -178,7 +178,7 @@ export const I18N = {
         tag: "Web app",
         blurb:
           "A reference tool for Teamfight Tactics — browse champions, items, traits, and augments from the current set, plus a stat calculator that scales champions by star level.",
-        url: "https://tft-companion-b9b2c.web.app/",
+        url: "https://tftcompanion.com/",
         soon: true,
       },
       {
@@ -192,11 +192,11 @@ export const I18N = {
       },
       {
         key: "saas",
-        title: "Bending Beam Calculator",
-        tag: "SaaS",
+        title: "SolveMyBeam",
+        tag: "Web app",
         blurb:
-          "An educational SaaS for structural analysis — born from my undergraduate thesis in Mechanical Engineering.",
-        url: "https://bending-beam-calculator.web.app/",
+          "An educational web app for structural analysis — born from my undergraduate thesis in Mechanical Engineering.",
+        url: "https://solvemybeam.com/",
         soon: true,
       },
     ],
@@ -371,7 +371,7 @@ export const I18N = {
         tag: "Aplicação web",
         blurb:
           "Uma ferramenta de referência para Teamfight Tactics — navegue por campeões, itens, sinergias e augments do set atual, com uma calculadora que escala os atributos por nível de estrela.",
-        url: "https://tft-companion-b9b2c.web.app/",
+        url: "https://tftcompanion.com/",
         soon: true,
       },
       {
@@ -385,11 +385,11 @@ export const I18N = {
       },
       {
         key: "saas",
-        title: "Calculadora de Viga em Flexão",
-        tag: "SaaS",
+        title: "SolveMyBeam",
+        tag: "Aplicação web",
         blurb:
-          "Um SaaS educacional para análise estrutural — nascido do meu TCC em Engenharia Mecânica.",
-        url: "https://bending-beam-calculator.web.app/",
+          "Um app educacional para análise estrutural — nascido do meu TCC em Engenharia Mecânica.",
+        url: "https://solvemybeam.com/",
         soon: true,
       },
     ],
