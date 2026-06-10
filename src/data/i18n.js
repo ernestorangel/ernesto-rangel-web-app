@@ -179,7 +179,7 @@ export const I18N = {
         blurb:
           "A reference tool for Teamfight Tactics — browse champions, items, traits, and augments from the current set, plus a stat calculator that scales champions by star level.",
         url: "https://tftcompanion.com/",
-        soon: true,
+        soon: false,
       },
       {
         key: "blog",
